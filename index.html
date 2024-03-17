@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <link rel='shortcut icon' href='https://airportconnect.co.uk/assets/logo/favicon.jpg'>
-    <link rel="stylesheet" href="https://airportconnect.co.uk/assets/css/bootstrap.min-5.1.3.css">
-    <link rel="stylesheet" href="https://airportconnect.co.uk/assets/css/fontawesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://www.airportsimplyconnect.co.uk/assets/logo/favicon.jpg" />
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>London Airport</title>
     <style>
         :root {
             --ns-font-family: sans-serif;
@@ -21,7 +24,7 @@
             --ns-text-menu: 0, 0, 0;
             --ns-bg-primary: 0, 64, 128;
             --ns-bg-secondary: 255, 200, 0;
-            --ns-text-primary: 255, 255, 255;
+            --ns-text-primary: 0, 64, 128;
             --ns-text-secondary: 0, 0, 0;
             --bs-primary-rgb: 0, 64, 128;
             --bs-secondary-rgb: 255, 200, 0;
@@ -30,7 +33,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="home2">
         <div class="navbar-top">
             <div class="container">
                 <div class="row">
@@ -81,14 +84,32 @@
                             <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <ul class="navbar-nav mb-2 mb-lg-0 gap-4">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="./index.html" target="_self" title="">Home</a>
+                                        <a class="nav-link active" href="./index.html" target="_self" title="">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="./about.html" target="_self" title="">About</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="./services.html" target="_self"
-                                            title="">Services</a>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" href="./services.html" target="_self" title="">Services</a>
+                                    </li> -->
+                                    <!-- if customerLogin-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="./services-1.html">Stansted airport </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="./services-2.html">Heathrow Airport </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="./services-3.html">Gatwick airport</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="./services-4.html">Luton airport</a></li>
+                                            <li><a class="dropdown-item" href="./services-5.html">Cambridge airport</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="./services-6.html">Oxford airport</a>
+                                            </li>
+
+                                        </ul>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="http://airportsimplyconnect.co.uk/reviews/"
@@ -128,159 +149,1043 @@
                 </div>
             </nav>
         </header>
-        <section class="about-section">
-            <div class="container mx-auto h-100">
-                <div class="h-100 d-flex justify-content-center align-items-center flex-column">
-                    <h1 class="text-white mb-3"> Our services</h1>
-                    <p class="text-white text-center text_15">London Airport Transfers Taxi is the leading taxi booking
-                        website
-                        that has
-                        been helping tourists
-                        and residents to find reliable airport transport services. We have been working in the market
-                        for many years, we understand the needs & demands of customers and also the expectations of taxi
-                        drivers.</p>
+        <section class="landingPage">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-center">
+                    <h1 class="text-white text-center fw-bold mb-3">
+                        Airport Simply Connect London <br />
+                        Airport Transfers
+                    </h1>
+                    <p class="text_24 mb-4 text-white">
+                        Your Local Airport Transfer Service Network
+                    </p>
+                    <div class="banner-v2  banner-v3">
+                        <form name="frmCabookie" id="frmCabookie"
+                            action="https://www.airportsimplyconnect.co.uk/vehicle-selection/" method="POST"
+                            target="_parent" data-parsley-validate="" novalidate="">
+                            <input type="hidden" name="rdJourneyCategory" value="Regular" />
+                            <div class="row gx-2">
+                                <div class="min-form-pickup col-12 col-lg">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px"
+                                                fill="#004080" class="w-6 h-6">
+                                                <path fill-rule="evenodd"
+                                                    d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                        <input type="text" id="txtPickUpLocation" name="txtPickUp"
+                                            placeholder="Pick Up - Location/Address"
+                                            class="form-control autocomplete-Location rounded-end ui-autocomplete-input"
+                                            autocomplete="off" required="required"
+                                            data-parsley-errors-container="#pickErrCon"
+                                            data-parsley-error-message="Please select valid location/address" />
+                                        <input type="text" id="txtPickUp" name="txtPickUp"
+                                            placeholder="Pick Up - Location/Address"
+                                            class="form-control autocomplete-Google pac-target-input" autocomplete="off"
+                                            style="display: none" disabled="disabled"
+                                            data-parsley-errors-container="#pickErrCon"
+                                            data-parsley-error-message="Please select valid address" />
+                                    </div>
+                                    <input type="hidden" id="txtPickUpLat" name="txtPickUpLat" />
+                                    <input type="hidden" id="txtPickUpLng" name="txtPickUpLng" />
+                                    <div id="pickErrCon"></div>
+                                </div>
+                                <div class="min-form-dropoff col-12 col-lg position-relative">
+                                    <div id="dropOff1Row">
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px"
+                                                    fill="#004080" class="w-6 h-6">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" id="txtDropOff1Location" name="txtDropOff[]"
+                                                placeholder="Drop Off"
+                                                class="form-control autocomplete-Location ui-autocomplete-input"
+                                                autocomplete="off" required="required"
+                                                data-parsley-errors-container="#dropErrCon"
+                                                data-parsley-error-message="Please select valid location/address" />
+                                            <input type="text" id="txtDropOff1" name="txtDropOff[]"
+                                                placeholder="Drop Off"
+                                                class="form-control autocomplete-Google pac-target-input"
+                                                autocomplete="off" style="display: none" disabled="disabled"
+                                                data-parsley-errors-container="#dropErrCon"
+                                                data-parsley-error-message="Please select valid location/address" />
+                                            <button type="button" class="btn btn-primary" onclick="addDropOff();">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="hidden" id="txtDropOff1Lat" name="txtDropOff1Lat" />
+                                        <input type="hidden" id="txtDropOff1Lng" name="txtDropOff1Lng" />
+                                    </div>
+                                    <div id="dropErrCon"></div>
+                                    <div id="addedRows" class="w-100">
+                                        <div id="dropoff2" style="display: none">
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="20px" fill="#004080" class="w-6 h-6">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" id="txtDropOff2Location" name="txtDropOff[]"
+                                                    placeholder="Via"
+                                                    class="form-control autocomplete-Location ui-autocomplete-input"
+                                                    autocomplete="off" data-parsley-errors-container="#dropOffErrCon2"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="text" id="txtDropOff2" name="txtDropOff[]"
+                                                    placeholder="Via"
+                                                    class="form-control autocomplete-Google pac-target-input"
+                                                    autocomplete="off" style="display: none" disabled="disabled"
+                                                    data-parsley-errors-container="#dropOffErrCon2"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="hidden" id="txtDropOff2Lat" name="txtDropOff2Lat"
+                                                    value="" />
+                                                <input type="hidden" id="txtDropOff2Lng" name="txtDropOff2Lng"
+                                                    value="" />
+                                                <button type="button" class="btn btn-danger"
+                                                    onclick="removeDropOff(2);">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <div id="dropOffErrCon2"></div>
+                                        </div>
+                                        <div id="dropoff3" style="display: none">
+                                            <div class="input-group p-2 mt-2">
+                                                <span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="20px" fill="#004080" class="w-6 h-6">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" id="txtDropOff3Location" name="txtDropOff[]"
+                                                    placeholder="Drop Off"
+                                                    class="form-control autocomplete-Location ui-autocomplete-input"
+                                                    autocomplete="off" data-parsley-errors-container="#dropOffErrCon3"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="text" id="txtDropOff3" name="txtDropOff[]"
+                                                    placeholder="Drop Off"
+                                                    class="form-control autocomplete-Google pac-target-input"
+                                                    autocomplete="off" style="display: none" disabled="disabled"
+                                                    data-parsley-errors-container="#dropOffErrCon3"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="hidden" id="txtDropOff3Lat" name="txtDropOff3Lat"
+                                                    value="" />
+                                                <input type="hidden" id="txtDropOff3Lng" name="txtDropOff3Lng"
+                                                    value="" />
+                                                <button type="button" class="btn btn-danger"
+                                                    onclick="removeDropOff(3);">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <div id="dropOffErrCon3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="min-form-datetime col-12 col-lg">
+                                    <div class="row gx-1">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="20px" fill="#004080" class="w-6 h-6">
+                                                        <path
+                                                            d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" name="txtDate" id="datepicker" class="form-control"
+                                                    placeholder="Pickup date" required=""
+                                                    data-parsley-errors-container="#txtDateCon"
+                                                    data-parsley-error-message="Please select valid date"
+                                                    readonly="readonly" />
+                                            </div>
+                                            <div id="txtDateCon"></div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <select name="selDateHr" id="selDateHr" class="form-select form-select-lg"
+                                                required="" data-parsley-error-message="Required">
+                                                <option value="">HH</option>
+                                                <option value="00">00</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <select name="selDateMn" id="selDateMn" class="form-select form-select-lg"
+                                                required="" data-parsley-error-message="Required">
+                                                <option value="">MM</option>
+                                                <option value="00">00</option>
+                                                <option value="05">05</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="25">25</option>
+                                                <option value="30">30</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                                <option value="55">55</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="min-form-submit col-12 col-lg-auto">
+                                    <input type="button" class="btn btn-primary w-100 h-100" id="btnCheckPrice"
+                                        value="GET QUOTE" />
+                                    <input type="hidden" name="cabookie" value="M" /><input type="hidden" name="key"
+                                        id="key" value="bGP8RpfAaZ" />
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </section>
-        <section class="services-section-new">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row service-section-item align-items-center">
-                            <div class="col-md-8 ">
-                                <h1>
-                                    Hassle-Free Stansted Airport Transfer in London
-                                </h1>
-                                <p>Convenient and Reliable Stansted Airport Transfer Services
-                                    Are you looking for a stress-free way to get to and from Stansted Airport in London?
-                                    Look no
-                                    further! Our Stansted Airport transfer services are designed to provide you with
-                                    convenience
-                                    and reliability, ensuring that your journey is smooth and seamless from start to
-                                    finish.
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <figure>
-                                    <img src="./assets/images/express-taxi-cab.png" alt="">
-                                </figure>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row service-section-item align-items-center">
-                            <div class="col-md-8 ">
-                                <h1>
-                                    Professional and Experienced Drivers
-                                </h1>
-                                <p>
-                                    When you book a Stansted Airport transfer with us, you can rest assured that you
-                                    will be in good hands. Our team of professional and experienced drivers are
-                                    well-versed in navigating the bustling streets of London, ensuring that you reach
-                                    your destination safely and on time.
-
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <figure>
-                                    <img src="./assets/images/1000s.jpg" alt="">
-                                </figure>
+        <section>
+            <div class="special-about-us">
+                <div class="container mx-auto">
+                    <div class="row special-about-us__wrapper">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="special-about-us-box">
+                                <div class="special-about-us-box__icon">
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="20px"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="w-6 h-6">
+                                        <path fill-rule="evenodd"
+                                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="special-about-us-box__content">
+                                    <h5 class="mb-2">24/7 Customer Service</h5>
+                                    <p class="">
+                                        We operate 24/7 all throughout the year. We are happy to
+                                        help at any time. You can reach us via phone call or an
+                                        email.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="special-about-us-box">
+                                <div class="special-about-us-box__icon">
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 502.685 502.685"
+                                        xml:space="preserve" fill="#000000">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row service-section-item align-items-center">
-                            <div class="col-md-8 ">
-                                <h1>
-                                    Comfortable and Well-Maintained Vehicles
-                                </h1>
-                                <p>
-                                    Our fleet of vehicles is meticulously maintained to ensure your comfort and safety
-                                    throughout the journey. Whether you are traveling solo or with a group, we have the
-                                    perfect vehicle to accommodate your needs, so you can sit back, relax, and enjoy the
-                                    ride
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
 
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <figure>
-                                    <img src="./assets/images/Buy-New-Car-3.webp" alt="">
-                                </figure>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row service-section-item align-items-center">
-                            <div class="col-md-8 ">
-                                <h1>
-                                    24/7 Availability and Instant Booking Confirmation
-                                </h1>
-                                <p>
-                                    We understand that travel plans can change at a moment's notice, which is why our
-                                    Stansted Airport transfer services are available 24/7. With our instant booking
-                                    confirmation, you can have peace of mind knowing that your transportation needs are
-                                    taken care of, no matter what time of day
-
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <figure>
-                                    <img src="./assets/images/png-transparent-24-7-service-customer-service-brand-information-overload-blue-text-service-removebg-preview.png"
-                                        alt="">
-                                </figure>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row service-section-item align-items-center">
-                            <div class="col-md-8 ">
-                                <h1>
-                                    Affordable Rates and Transparent Pricing
-                                </h1>
-                                <p>
-                                    Say goodbye to hidden fees and unexpected charges! Our Stansted Airport transfer
-                                    services offer affordable rates with transparent pricing, so you know exactly what
-                                    to expect before you book. Enjoy a hassle-free payment process and get excellent
-                                    value for your money.
-
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <figure>
-                                    <img src="./assets/images/988-9888208_affordable-rates-on-insurance-best-price.png"
-                                        alt="">
-                                </figure>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <g>
+                                                <g>
+                                                    <path style="fill: #004080"
+                                                        d="M482.797,276.924c4.53-5.824,6.73-13.331,4.724-20.988L428.05,30.521 c-3.451-13.029-16.847-20.837-29.854-17.386L18.184,113.331C5.22,116.761-2.61,130.2,0.798,143.207L60.269,368.6 c3.408,13.007,16.868,20.816,29.876,17.408l134.278-35.419v75.476c0,42.214,69.954,64.303,139.11,64.303 c69.113,0,139.153-22.089,139.153-64.302V311.61C502.685,297.869,495.157,286.307,482.797,276.924z M439.763,199.226l6.212,23.469 l-75.541,19.953l-6.169-23.512L439.763,199.226z M395.931,50.733l11.799,44.695l-118.014,31.148l-11.799-44.695L395.931,50.733z M342.975,224.744l6.04,22.951c-27.934,1.251-55.113,6.126-76.943,14.452l-4.616-17.429L342.975,224.744z M79.984,319.224 l-6.169-23.426l75.519-19.975l6.212,23.555L79.984,319.224z M170.625,270.237l75.476-19.953l5.716,21.506 c-1.834,1.122-3.559,2.286-5.242,3.473l-69.781,18.421L170.625,270.237z M477.491,424.209c0,24.612-50.993,44.544-113.958,44.544 c-62.9,0-113.937-19.953-113.937-44.544v-27.718c0-0.928,0.539-1.769,0.69-2.653c3.602,23.34,52.654,41.847,113.247,41.847 c60.614,0,109.687-18.508,113.268-41.847c0.151,0.884,0.69,1.726,0.69,2.653V424.209z M477.491,369.678 c0,24.591-50.993,44.522-113.958,44.522c-62.9,0-113.937-19.931-113.937-44.522V341.96c0-0.906,0.539-1.769,0.69-2.653 c3.602,23.318,52.654,41.869,113.247,41.869c60.614,0,109.687-18.551,113.268-41.869c0.151,0.884,0.69,1.747,0.69,2.653V369.678z M363.532,356.11c-62.9,0-113.937-19.931-113.937-44.501c0-24.569,51.036-44.5,113.937-44.5c62.965,0,113.958,19.931,113.958,44.5 C477.491,336.179,426.497,356.11,363.532,356.11z" />
+                                                </g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                                <g></g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="special-about-us-box__content">
+                                    <h5 class="mb-2">Pre-paid option</h5>
+                                    <p class="">
+                                        Are you in a hurry such that it’s tough for you to spend a
+                                        minute after the ride? Release your breath! Opt for our
+                                        prepaid option and lean on the seat.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="special-about-us-box">
+                                <div class="special-about-us-box__icon">
+                                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 128 128">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #1d75b8;
+                                                }
 
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row service-section-item align-items-center">
-                            <div class="col-md-8 ">
-                                <h1>
-                                    Conclusion
-                                </h1>
-                                <p>
-                                    Don't let transportation woes dampen your travel experience. Choose our Stansted
-                                    Airport transfer services for a convenient, reliable, and comfortable journey to and
-                                    from the airport. Sit back, relax, and let us take care of the rest. Book your
-                                    airport transfer today and experience the difference!
-
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <figure>
-                                    <img src="./assets/images/7067950.png" alt="">
-                                </figure>
+                                                .cls-2 {
+                                                    fill: #2d3e50;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <title>b</title>
+                                        <path class="cls-1"
+                                            d="M50.76057,85.448a13.25785,13.25785,0,0,0-2.82808-1.89339,32.17224,32.17224,0,0,0-3.54612-1.52619q-1.26243-.43654-2.15387-.807a9.58055,9.58055,0,0,1-1.501-.7622,2.60484,2.60484,0,0,1-.892-.892,2.386,2.386,0,0,1-.2827-1.19636,2.18976,2.18976,0,0,1,.91365-1.82759,5.03162,5.03162,0,0,1,3.002-.696,17.75114,17.75114,0,0,1,3.98117.43487,20.14188,20.14188,0,0,1,3.32859,1.04435l1.349-5.22107a17.24061,17.24061,0,0,0-2.58892-.87024,24.45864,24.45864,0,0,0-3.89434-.65271v-4.525H40.16579v4.69909a10.95807,10.95807,0,0,0-3.30668,1.10952,7.38679,7.38679,0,0,0-2.26261,1.84906,7.30924,7.30924,0,0,0-1.2835,2.41466,9.22988,9.22988,0,0,0-.41339,2.76319,6.66084,6.66084,0,0,0,2.45851,5.4386,11.30485,11.30485,0,0,0,2.47983,1.54458q1.37095.63122,2.80645,1.15309,1.4789.52228,2.61052.97883a11.25238,11.25238,0,0,1,1.87116.93557,3.83782,3.83782,0,0,1,1.13118,1.066,2.4922,2.4922,0,0,1,.39145,1.4142,2.36274,2.36274,0,0,1-.97883,2.02317,6.5297,6.5297,0,0,1-3.63324.71776,15.98683,15.98683,0,0,1-4.45977-.609,22.86648,22.86648,0,0,1-3.633-1.34868l-1.87085,5.00355a29.65488,29.65488,0,0,0,2.93683,1.19639,20.34935,20.34935,0,0,0,5.1559.97914v5.1775h5.48214V99.25552a11.48835,11.48835,0,0,0,3.58969-1.13059A7.98969,7.98969,0,0,0,51.609,96.25467a6.70166,6.70166,0,0,0,1.3051-2.3699,8.81556,8.81556,0,0,0,.39179-2.58742,7.80507,7.80507,0,0,0-.6745-3.34876A7.718,7.718,0,0,0,50.76057,85.448Z"
+                                            id="id_101" style="fill: #004080"></path>
+                                        <path class="cls-1"
+                                            d="M71.339,88.17965A28.79619,28.79619,0,1,1,39.82029,56.66089,46.89164,46.89164,0,0,1,37.8205,45.67623,39.93031,39.93031,0,1,0,82.32377,90.1795,46.89273,46.89273,0,0,1,71.339,88.17965Z"
+                                            id="id_102" style="fill: #004080"></path>
+                                        <path class="cls-2"
+                                            d="M85.30914,2.76138a39.92948,39.92948,0,1,0,39.92948,39.92948A39.97472,39.97472,0,0,0,85.30914,2.76138Zm10.22877,48.5029a6.84144,6.84144,0,0,1-1.31088,2.373,8.027,8.027,0,0,1-2.373,1.86588,11.23424,11.23424,0,0,1-3.5882,1.12908v5.31052H82.783V56.76619a20.17312,20.17312,0,0,1-5.14788-.976,29.90311,29.90311,0,0,1-2.93755-1.19607l1.86588-5.00432a24.01,24.01,0,0,0,3.636,1.34914,16.14061,16.14061,0,0,0,4.459.60282,6.558,6.558,0,0,0,3.636-.71764,2.35644,2.35644,0,0,0,.976-2.01895,2.51144,2.51144,0,0,0-.39228-1.41612,3.7872,3.7872,0,0,0-1.12908-1.06215,11.00541,11.00541,0,0,0-1.87545-.9377c-.75589-.3062-1.62666-.6315-2.61219-.98559-.95685-.34445-1.885-.72716-2.80357-1.14818a11.61392,11.61392,0,0,1-2.47828-1.54058,6.65391,6.65391,0,0,1-2.45912-5.4445,9.21675,9.21675,0,0,1,.41144-2.76526,7.51186,7.51186,0,0,1,1.28221-2.41129,7.40942,7.40942,0,0,1,2.26774-1.84672,10.888,10.888,0,0,1,3.30116-1.11V23.439h5.48275v4.5259a24.35407,24.35407,0,0,1,3.8944.65065,17.219,17.219,0,0,1,2.59309.87077l-1.3492,5.21486a21.107,21.107,0,0,0-3.32983-1.043,17.87341,17.87341,0,0,0-3.98048-.4306,4.99656,4.99656,0,0,0-3.00453.69854,2.19308,2.19308,0,0,0-.909,1.82756,2.48158,2.48158,0,0,0,.27747,1.19607,2.58088,2.58088,0,0,0,.89944.88987,8.98587,8.98587,0,0,0,1.49269.756c.59324.24873,1.32046.51668,2.15292.8133a32.17364,32.17364,0,0,1,3.54995,1.52142A13.53031,13.53031,0,0,1,93.385,42.82483a7.50065,7.50065,0,0,1,2.5452,5.85594A8.9103,8.9103,0,0,1,95.53791,51.26428Z"
+                                            id="id_103" style="fill: rgb(143, 138, 130)"></path>
+                                    </svg>
+                                </div>
+                                <div class="special-about-us-box__content">
+                                    <h5 class="mb-2">Cash as an option</h5>
+                                    <p class="">
+                                        Don't you have your credit cards and debit cards handy?
+                                        Facing issues with the same? Relax! We accept cash
+                                        payments too.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <div class="special-about-us-box">
+                                <div class="special-about-us-box__icon">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 122.88 120.1" style="enable-background: new 0 0 122.88 120.1"
+                                        xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0 {
+                                                fill: #393939;
+                                            }
 
+                                            .st1 {
+                                                fill-rule: evenodd;
+                                                clip-rule: evenodd;
+                                                fill: #6bbe66;
+                                            }
+                                        </style>
+                                        <g>
+                                            <path class="st0"
+                                                d="M69.43,4.04c0-2.22,2.19-4.04,4.92-4.04s4.92,1.8,4.92,4.04V21.7c0,2.22-2.19,4.04-4.92,4.04 s-4.92-1.8-4.92-4.04V4.04L69.43,4.04L69.43,4.04z M13.41,57.17c-0.28,0-0.53-1.23-0.53-2.73s0.22-2.72,0.53-2.72h13.44 c0.28,0,0.53,1.23,0.53,2.72c0,1.5-0.22,2.73-0.53,2.73H13.41L13.41,57.17L13.41,57.17z M34.82,57.17c-0.28,0-0.53-1.23-0.53-2.73 s0.22-2.72,0.53-2.72h13.44c0.28,0,0.53,1.23,0.53,2.72c0,1.5-0.22,2.73-0.53,2.73H34.82L34.82,57.17L34.82,57.17z M56.24,57.17 c-0.28,0-0.53-1.23-0.53-2.73s0.22-2.72,0.53-2.72h13.44c0.28,0,0.53,1.22,0.53,2.71c-1.35,0.84-2.64,1.75-3.88,2.74H56.24 L56.24,57.17L56.24,57.17z M13.44,72.8c-0.28,0-0.53-1.23-0.53-2.73c0-1.5,0.22-2.73,0.53-2.73h13.44c0.28,0,0.53,1.23,0.53,2.73 c0,1.51-0.22,2.73-0.53,2.73H13.44L13.44,72.8L13.44,72.8z M34.85,72.8c-0.28,0-0.53-1.23-0.53-2.73c0-1.5,0.22-2.73,0.53-2.73 h13.44c0.28,0,0.53,1.23,0.53,2.73c0,1.51-0.22,2.73-0.53,2.73H34.85L34.85,72.8L34.85,72.8z M13.46,88.43 c-0.28,0-0.53-1.23-0.53-2.73c0-1.51,0.22-2.73,0.53-2.73H26.9c0.28,0,0.53,1.23,0.53,2.73c0,1.5-0.22,2.73-0.53,2.73H13.46 L13.46,88.43L13.46,88.43z M34.88,88.43c-0.28,0-0.53-1.23-0.53-2.73c0-1.51,0.22-2.73,0.53-2.73h13.44c0.28,0,0.53,1.23,0.53,2.73 c0,1.5-0.22,2.73-0.53,2.73H34.88L34.88,88.43L34.88,88.43z M25.21,4.04C25.21,1.81,27.4,0,30.13,0c2.73,0,4.92,1.8,4.92,4.04V21.7 c0,2.22-2.2,4.04-4.92,4.04c-2.73,0-4.92-1.8-4.92-4.04V4.04L25.21,4.04L25.21,4.04z M5.42,38.61h93.77V18.28 c0-0.7-0.28-1.31-0.73-1.75c-0.45-0.45-1.09-0.73-1.75-0.73h-8.99c-1.51,0-2.73-1.23-2.73-2.73c0-1.5,1.22-2.73,2.73-2.73h8.99 c2.2,0,4.18,0.89,5.62,2.33c1.45,1.45,2.33,3.42,2.33,5.62v32.28c-1.79-0.62-3.64-1.12-5.53-1.49v-5.04h0.06H5.42V96.7 c0,0.7,0.28,1.31,0.73,1.75c0.45,0.45,1.09,0.73,1.75,0.73h44.56c0.51,1.89,1.15,3.74,1.91,5.51H7.95c-2.19,0-4.18-0.89-5.62-2.33 C0.89,100.92,0,98.95,0,96.75V18.3c0-2.19,0.89-4.18,2.33-5.62c1.45-1.45,3.42-2.33,5.62-2.33h9.6c1.5,0,2.73,1.23,2.73,2.73 s-1.23,2.73-2.73,2.73h-9.6c-0.7,0-1.31,0.28-1.75,0.73c-0.45,0.45-0.73,1.09-0.73,1.75v20.33L5.42,38.61L5.42,38.61L5.42,38.61z M42.93,15.8c-1.5,0-2.73-1.23-2.73-2.73c0-1.5,1.23-2.73,2.73-2.73h18.3c1.51,0,2.73,1.23,2.73,2.73c0,1.51-1.23,2.73-2.73,2.73 H42.93L42.93,15.8L42.93,15.8z"
+                                                id="id_101"></path>
+                                            <path class="st1"
+                                                d="M91.09,56.53c8.78,0,16.73,3.56,22.48,9.31c5.74,5.76,9.3,13.71,9.3,22.48s-3.56,16.73-9.3,22.48 c-5.76,5.75-13.71,9.31-22.48,9.31s-16.73-3.56-22.48-9.31c-5.75-5.76-9.31-13.71-9.31-22.48c0-8.77,3.56-16.73,9.31-22.48 C74.36,60.09,82.31,56.53,91.09,56.53L91.09,56.53z M77.09,91.7c-0.15-0.16-0.28-0.33-0.39-0.51c-0.12-0.18-0.21-0.37-0.3-0.57 c-0.28-0.66-0.35-1.36-0.23-2.04c0.12-0.67,0.42-1.31,0.9-1.83l0.18-0.18c1.19-1.13,2.99-1.34,4.4-0.49 c0.2,0.12,0.39,0.26,0.57,0.43l0.02,0.02c1,0.96,2.69,2.53,3.8,3.51l0.95,0.85l11.66-12.23c0.16-0.17,0.34-0.32,0.54-0.45 c0.2-0.14,0.4-0.25,0.61-0.34c0.21-0.09,0.44-0.17,0.67-0.22c0.23-0.05,0.47-0.08,0.7-0.08h0.01c0.23,0,0.46,0.01,0.69,0.05 c0.23,0.04,0.45,0.1,0.69,0.19c0.22,0.08,0.43,0.19,0.63,0.31c0.19,0.12,0.37,0.26,0.55,0.43l0.08,0.08 c0.16,0.16,0.31,0.34,0.44,0.53c0.13,0.19,0.25,0.4,0.34,0.61c0.1,0.21,0.17,0.44,0.22,0.67c0.05,0.23,0.08,0.46,0.09,0.7v0.12 c0,0.21-0.02,0.42-0.06,0.62c-0.04,0.22-0.1,0.45-0.18,0.66c-0.08,0.22-0.19,0.43-0.31,0.63c-0.12,0.2-0.27,0.38-0.43,0.55 L89.83,98.49c-0.17,0.18-0.34,0.33-0.53,0.46c-0.19,0.14-0.4,0.25-0.61,0.35s-0.44,0.17-0.67,0.23s-0.46,0.09-0.7,0.1l-0.06,0 c-0.22,0-0.44-0.01-0.64-0.04l-0.05-0.01c-0.21-0.04-0.42-0.09-0.62-0.16c-0.22-0.08-0.43-0.18-0.63-0.3l-0.03-0.02 c-0.19-0.12-0.37-0.25-0.54-0.39l-0.03-0.03c-0.82-0.76-1.71-1.53-2.6-2.31C80.55,95.02,78.39,93.07,77.09,91.7L77.09,91.7 L77.09,91.7L77.09,91.7z"
+                                                id="id_102" style="fill: #004080"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="special-about-us-box__content">
+                                    <h5 class="mb-2">Booking Confirmation</h5>
+                                    <p class="">
+                                        Download the booking confirmation once you are done with
+                                        the booking. It’s an affirmation for your wonderful ride.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="home-services-section">
+            <div class="container mx-auto">
+                <h2 class="text-center mb-3 text_36">Our Services</h2>
+                <p class="text-center text_16">
+                    We provide top-notch cab services to every nook and corner of the
+                    UK. Are you anxious about the business meeting <br />
+
+                    which is about to happen in a hour? Or missing a flight or a medical
+                    appointment? Help is a click away!
+                </p>
+                <div class="row home-services-box__wrapper">
+                    <div class="col-lg-4 col-md-4 mb-5">
+                        <div class="home-services-box position-relative">
+                            <div class="home-services-box__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="32" fill="#fff" viewBox="0 0 64 64"
+                                    width="40">
+                                    <g id="Idea">
+                                        <path d="m32 10a1 1 0 0 0 1-1v-4a1 1 0 0 0 -2 0v4a1 1 0 0 0 1 1z" />
+                                        <path
+                                            d="m17.1509 15.5649a1 1 0 1 0 1.414-1.414l-2.8286-2.8286a1 1 0 1 0 -1.414 1.414z" />
+                                        <path d="m12 28h-4a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2z" />
+                                        <path
+                                            d="m17.1509 42.4351-2.8286 2.8286a1 1 0 1 0 1.414 1.414l2.8286-2.8286a1 1 0 0 0 -1.414-1.414z" />
+                                        <path
+                                            d="m48.2637 11.3223-2.8286 2.8286a1 1 0 1 0 1.414 1.414l2.8286-2.8286a1 1 0 1 0 -1.414-1.414z" />
+                                        <path
+                                            d="m46.8491 42.4351a1 1 0 0 0 -1.414 1.414l2.8286 2.8286a1 1 0 0 0 1.414-1.414z" />
+                                        <path d="m56 28h-4a1 1 0 0 0 0 2h4a1 1 0 0 0 0-2z" />
+                                        <path
+                                            d="m24 54a2.002 2.002 0 0 0 2 2h2v2a2.002 2.002 0 0 0 2 2h4a2.002 2.002 0 0 0 2-2v-2h2a2.002 2.002 0 0 0 2-2v-2h-16z" />
+                                        <path d="m24 48h16v2h-16z" />
+                                        <path
+                                            d="m43.335 16.33a16.8647 16.8647 0 0 0 -13.2745-4.2227 16.99 16.99 0 0 0 -6.0605 31.8751v2.0176h7v-4.5859l-2.707-2.7071a1 1 0 0 1 1.414-1.414l2.293 2.2929 2.293-2.2929a1 1 0 0 1 1.414 1.414l-2.707 2.7071v4.5859h7v-2.0171a16.984 16.984 0 0 0 3.335-27.6529z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="home-services-box__content">
+                                <h5 class="mb-3 mt-3 text_22">Budget friendly</h5>
+                                <p class="text_16">
+                                    Leave the worry! The rates are cheap and reasonable in the
+                                    market. We empathize customers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-5">
+                        <div class="home-services-box position-relative">
+                            <div class="home-services-box__icon">
+                                <svg version="1.1" id="Icons" width="32" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32"
+                                    style="enable-background: new 0 0 32 32" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st0 {
+                                            fill: none;
+                                            stroke: #000000;
+                                            stroke-width: 2;
+                                            stroke-linecap: round;
+                                            stroke-linejoin: round;
+                                            stroke-miterlimit: 10;
+                                        }
+                                    </style>
+                                    <path class="st0"
+                                        d="M29.1,2.9L29.1,2.9c-1.2-1.2-3.1-1.2-4.3,0l-4.7,4.7L7,3.6L4.1,6.5l11.4,5.7l-5.4,5.4l-4.9-0.3L2,20.6l8,1.4
+                                        l1.4,8l3.3-3.3l-0.3-4.9l5.4-5.4l5.7,11.4l2.9-2.9l-4-13.1l4.7-4.7C30.3,6,30.3,4.1,29.1,2.9z"
+                                        id="id_101" style="stroke: rgb(255, 255, 255)"></path>
+                                </svg>
+                            </div>
+                            <div class="home-services-box__content">
+                                <h5 class="mb-3 mt-3 text_22">The Vehicles</h5>
+                                <p class="text_16">
+                                    From a spectacular Saloon to a Marvellous 8 seater, our cars
+                                    are so appealing. Get ready to Aww people.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-5">
+                        <div class="home-services-box position-relative">
+                            <div class="home-services-box__icon">
+                                <svg width="32" height="32" viewBox="0 0 64 64" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M39 42C37.8133 42 36.6533 42.3519 35.6666 43.0112C34.6799 43.6705 33.9109 44.6075 33.4567 45.7039C33.0026 46.8003 32.8838 48.0067 33.1153 49.1705C33.3468 50.3344 33.9182 51.4035 34.7574 52.2426C35.5965 53.0818 36.6656 53.6532 37.8295 53.8847C38.9933 54.1162 40.1997 53.9974 41.2961 53.5433C42.3925 53.0892 43.3295 52.3201 43.9888 51.3334C44.6481 50.3467 45 49.1867 45 48C44.9984 46.4092 44.3658 44.884 43.2409 43.7591C42.116 42.6342 40.5908 42.0016 39 42ZM39 52C38.2089 52 37.4355 51.7654 36.7777 51.3259C36.1199 50.8864 35.6072 50.2616 35.3045 49.5307C35.0017 48.7998 34.9225 47.9956 35.0769 47.2196C35.2312 46.4437 35.6122 45.731 36.1716 45.1716C36.731 44.6122 37.4437 44.2312 38.2196 44.0769C38.9956 43.9225 39.7998 44.0017 40.5307 44.3045C41.2616 44.6072 41.8864 45.1199 42.3259 45.7777C42.7654 46.4355 43 47.2089 43 48C43 49.0609 42.5786 50.0783 41.8284 50.8284C41.0783 51.5786 40.0609 52 39 52Z"
+                                        fill="#ffffff" id="id_111"></path>
+                                    <path
+                                        d="M19 32C17.6155 32 16.2621 32.4105 15.111 33.1797C13.9599 33.9489 13.0627 35.0421 12.5328 36.3212C12.003 37.6003 11.8644 39.0078 12.1345 40.3656C12.4046 41.7235 13.0713 42.9708 14.0502 43.9497C15.0292 44.9287 16.2765 45.5954 17.6344 45.8655C18.9922 46.1356 20.3997 45.997 21.6788 45.4672C22.9579 44.9373 24.0511 44.0401 24.8203 42.889C25.5895 41.7378 26 40.3845 26 39C25.9979 37.1441 25.2597 35.3649 23.9474 34.0526C22.6351 32.7403 20.8559 32.0021 19 32ZM19 44C18.0111 44 17.0444 43.7068 16.2221 43.1573C15.3999 42.6079 14.759 41.827 14.3806 40.9134C14.0022 39.9998 13.9031 38.9945 14.0961 38.0245C14.289 37.0546 14.7652 36.1637 15.4645 35.4645C16.1637 34.7652 17.0546 34.289 18.0245 34.0961C18.9944 33.9031 19.9998 34.0022 20.9134 34.3806C21.827 34.759 22.6079 35.3999 23.1573 36.2221C23.7068 37.0444 24 38.0111 24 39C23.9984 40.3256 23.4711 41.5964 22.5338 42.5338C21.5964 43.4711 20.3256 43.9984 19 44Z"
+                                        fill="#ffffff" id="id_112"></path>
+                                    <path
+                                        d="M44 18.184V12H42V18.184C41.4171 18.3901 40.9121 18.7712 40.5541 19.2753C40.1961 19.7794 40.0026 20.3817 40 21C40.0017 21.4455 40.1043 21.8848 40.3 22.285L37.292 25.293L38.706 26.707L41.715 23.7C42.1152 23.8957 42.5545 23.9983 43 24C43.7068 24.0013 44.3913 23.7525 44.9322 23.2975C45.4732 22.8425 45.8356 22.2108 45.9554 21.5142C46.0752 20.8176 45.9445 20.1011 45.5866 19.4915C45.2287 18.882 44.6667 18.4188 44 18.184ZM43 22C42.8022 22 42.6089 21.9414 42.4444 21.8315C42.28 21.7216 42.1518 21.5654 42.0761 21.3827C42.0004 21.2 41.9806 20.9989 42.0192 20.8049C42.0578 20.6109 42.153 20.4327 42.2929 20.2929C42.4327 20.153 42.6109 20.0578 42.8049 20.0192C42.9989 19.9806 43.1999 20.0004 43.3827 20.0761C43.5654 20.1518 43.7216 20.28 43.8315 20.4444C43.9413 20.6089 44 20.8022 44 21C44 21.2652 43.8946 21.5196 43.7071 21.7071C43.5196 21.8946 43.2652 22 43 22Z"
+                                        fill="#ffffff" id="id_113"></path>
+                                    <path
+                                        d="M62 21C62.0066 18.2171 61.4018 15.4666 60.2283 12.9432C59.0548 10.4197 57.3414 8.18491 55.209 6.39665C53.0766 4.60839 50.5775 3.31039 47.8882 2.59441C45.1989 1.87844 42.3852 1.76199 39.646 2.25326C36.9067 2.74454 34.3088 3.83157 32.036 5.43748C29.7631 7.0434 27.8708 9.129 26.4928 11.5468C25.1148 13.9647 24.2848 16.6557 24.0614 19.4297C23.838 22.2036 24.2267 24.9928 25.2 27.6C24.3778 27.141 23.5054 26.7786 22.6 26.52L21.99 22.84C21.9519 22.6051 21.8313 22.3915 21.6499 22.2375C21.4684 22.0835 21.238 21.9993 21 22H17C16.762 21.9993 16.5316 22.0835 16.3501 22.2375C16.1687 22.3915 16.0481 22.6051 16.01 22.84L15.4 26.52C14.4664 26.7842 13.567 27.1568 12.72 27.63L9.68 25.46C9.48799 25.3211 9.2529 25.2549 9.01664 25.2733C8.78038 25.2916 8.55831 25.3932 8.39 25.56L5.56 28.39C5.39319 28.5583 5.29157 28.7804 5.27325 29.0167C5.25494 29.2529 5.32112 29.488 5.46 29.68L7.63 32.72C7.15676 33.567 6.78423 34.4664 6.52 35.4L2.84 36.01C2.60508 36.0481 2.39145 36.1687 2.23748 36.3501C2.08352 36.5316 1.99931 36.762 2 37V41C1.99931 41.238 2.08352 41.4684 2.23748 41.6499C2.39145 41.8313 2.60508 41.9519 2.84 41.99L6.52 42.6C6.78423 43.5336 7.15676 44.433 7.63 45.28L5.46 48.32C5.32112 48.512 5.25494 48.7471 5.27325 48.9834C5.29157 49.2196 5.39319 49.4417 5.56 49.61L8.39 52.44C8.55831 52.6068 8.78038 52.7084 9.01664 52.7267C9.2529 52.7451 9.48799 52.6789 9.68 52.54L12.72 50.37C13.567 50.8432 14.4664 51.2158 15.4 51.48L16.01 55.16C16.0481 55.3949 16.1687 55.6085 16.3501 55.7625C16.5316 55.9165 16.762 56.0007 17 56H21C21.238 56.0007 21.4684 55.9165 21.6499 55.7625C21.8313 55.6085 21.9519 55.3949 21.99 55.16L22.6 51.48C23.5336 51.2158 24.433 50.8432 25.28 50.37L28.32 52.54C28.4282 52.6188 28.5519 52.6737 28.6829 52.7013C28.8139 52.7289 28.9492 52.7284 29.08 52.7C29.12 52.8 29.17 52.91 29.22 53.01L27.59 55.18C27.4444 55.3725 27.3733 55.6111 27.3899 55.8518C27.4064 56.0926 27.5095 56.3193 27.68 56.49L30.51 59.32C30.6807 59.4905 30.9074 59.5936 31.1482 59.6101C31.3889 59.6267 31.6275 59.5556 31.82 59.41L33.99 57.78C34.5169 58.0518 35.0654 58.2792 35.63 58.46L36.01 61.14C36.0437 61.3786 36.1625 61.5969 36.3443 61.7549C36.5262 61.9129 36.7591 62 37 62H41C41.2409 62 41.4738 61.9129 41.6556 61.7549C41.8375 61.5969 41.9563 61.3786 41.99 61.14L42.37 58.46C42.9346 58.2792 43.4831 58.0518 44.01 57.78L46.18 59.41C46.3725 59.5556 46.6111 59.6267 46.8518 59.6101C47.0926 59.5936 47.3193 59.4905 47.49 59.32L50.32 56.49C50.4905 56.3193 50.5936 56.0926 50.6101 55.8518C50.6267 55.6111 50.5556 55.3725 50.41 55.18L48.78 53.01C49.0517 52.4831 49.2792 51.9346 49.46 51.37L52.14 50.99C52.3786 50.9563 52.5969 50.8375 52.7549 50.6557C52.9129 50.4738 53 50.2409 53 50V46C53 45.7591 52.9129 45.5262 52.7549 45.3444C52.5969 45.1625 52.3786 45.0437 52.14 45.01L49.46 44.63C49.2792 44.0654 49.0517 43.5169 48.78 42.99L50.41 40.82C50.5556 40.6275 50.6267 40.3889 50.6101 40.1482C50.5936 39.9074 50.4905 39.6807 50.32 39.51L49.6 38.79C53.234 37.4425 56.3693 35.0163 58.5856 31.8366C60.8019 28.657 61.9932 24.8758 62 21ZM28.79 50.42L25.91 48.37C25.7497 48.2544 25.5586 48.1888 25.3611 48.1817C25.1635 48.1746 24.9682 48.2262 24.8 48.33C23.7824 48.9665 22.6677 49.4326 21.5 49.71C21.3056 49.753 21.1285 49.8531 20.9913 49.9974C20.8541 50.1417 20.7631 50.3237 20.73 50.52L20.15 54H17.85L17.27 50.52C17.2369 50.3237 17.1459 50.1417 17.0087 49.9974C16.8715 49.8531 16.6944 49.753 16.5 49.71C15.3322 49.4326 14.2176 48.9665 13.2 48.33C13.0317 48.2262 12.8365 48.1746 12.6389 48.1817C12.4414 48.1888 12.2503 48.2544 12.09 48.37L9.21 50.42L7.58 48.79L9.63 45.91C9.74564 45.7497 9.81116 45.5586 9.81828 45.3611C9.8254 45.1635 9.7738 44.9683 9.67 44.8C9.03353 43.7824 8.5674 42.6678 8.29 41.5C8.24698 41.3056 8.14691 41.1285 8.0026 40.9913C7.8583 40.8541 7.67633 40.7631 7.48 40.73L4 40.15V37.85L7.48 37.27C7.67633 37.2369 7.8583 37.1459 8.0026 37.0087C8.14691 36.8715 8.24698 36.6944 8.29 36.5C8.5674 35.3323 9.03353 34.2176 9.67 33.2C9.7738 33.0318 9.8254 32.8365 9.81828 32.6389C9.81116 32.4414 9.74564 32.2504 9.63 32.09L7.58 29.21L9.21 27.58L12.09 29.63C12.2503 29.7456 12.4414 29.8112 12.6389 29.8183C12.8365 29.8254 13.0317 29.7738 13.2 29.67C14.2176 29.0335 15.3322 28.5674 16.5 28.29C16.6944 28.247 16.8715 28.1469 17.0087 28.0026C17.1459 27.8583 17.2369 27.6763 17.27 27.48L17.85 24H20.15L20.73 27.48C20.7631 27.6763 20.8541 27.8583 20.9913 28.0026C21.1285 28.1469 21.3056 28.247 21.5 28.29C22.6677 28.5674 23.7824 29.0335 24.8 29.67C24.9682 29.7738 25.1635 29.8254 25.3611 29.8183C25.5586 29.8112 25.7497 29.7456 25.91 29.63L26.05 29.54C26.6489 30.7334 27.373 31.8597 28.21 32.9C28.2324 33.0062 28.273 33.1077 28.33 33.2C28.9683 34.2202 29.4345 35.3385 29.71 36.51C29.7556 36.7022 29.8567 36.8766 30.0007 37.0118C30.1448 37.1469 30.3253 37.2367 30.52 37.27L34 37.85V40.15L30.52 40.73C30.3237 40.7631 30.1417 40.8541 29.9974 40.9913C29.8531 41.1285 29.753 41.3056 29.71 41.5C29.4326 42.6678 28.9665 43.7824 28.33 44.8C28.2262 44.9683 28.1746 45.1635 28.1817 45.3611C28.1888 45.5586 28.2544 45.7497 28.37 45.91L30.42 48.79L28.79 50.42ZM51 46.87V49.13L48.54 49.48C48.3443 49.5084 48.1613 49.5936 48.0137 49.7252C47.8661 49.8568 47.7605 50.0289 47.71 50.22C47.5027 51.0511 47.1724 51.8465 46.73 52.58C46.6291 52.7502 46.5809 52.9465 46.5916 53.1441C46.6022 53.3417 46.6713 53.5317 46.79 53.69L48.29 55.69L46.69 57.29L44.69 55.79C44.5299 55.6711 44.3382 55.6019 44.139 55.5913C43.9398 55.5806 43.7419 55.6288 43.57 55.73C42.8409 56.1741 42.0485 56.5045 41.22 56.71C41.0288 56.7605 40.8568 56.8662 40.7252 57.0137C40.5936 57.1613 40.5083 57.3443 40.48 57.54L40.13 60H37.87L37.52 57.54C37.4916 57.3443 37.4064 57.1613 37.2748 57.0137C37.1432 56.8662 36.9711 56.7605 36.78 56.71C35.9515 56.5045 35.159 56.1741 34.43 55.73C34.2587 55.6269 34.0604 55.5775 33.8608 55.5882C33.6612 55.5989 33.4693 55.6692 33.31 55.79L31.31 57.29L29.71 55.69L31.21 53.69C31.332 53.5309 31.4022 53.3382 31.4112 53.1379C31.4201 52.9376 31.3674 52.7393 31.26 52.57C31.0369 52.1851 30.843 51.784 30.68 51.37L32.44 49.61C32.6068 49.4417 32.7084 49.2196 32.7267 48.9834C32.7451 48.7471 32.6789 48.512 32.54 48.32L30.37 45.28C30.8432 44.433 31.2158 43.5336 31.48 42.6L35.16 41.99C35.3949 41.9519 35.6085 41.8313 35.7625 41.6499C35.9165 41.4684 36.0007 41.238 36 41V39.53C36.2552 39.4353 36.5157 39.3552 36.78 39.29C36.9234 39.2485 37.0564 39.1769 37.17 39.08C39.0538 39.6873 41.0207 39.9977 43 40H43.08C43.2486 40.0801 43.4122 40.1703 43.57 40.27C43.7285 40.3604 43.9075 40.4086 44.09 40.41C44.306 40.408 44.5159 40.338 44.69 40.21L45.15 39.87C45.9177 39.7805 46.6792 39.6436 47.43 39.46L48.29 40.31L46.79 42.31C46.6713 42.4683 46.6022 42.6583 46.5916 42.8559C46.5809 43.0535 46.6291 43.2498 46.73 43.42C47.1724 44.1535 47.5027 44.9489 47.71 45.78C47.7605 45.9712 47.8661 46.1432 48.0137 46.2748C48.1613 46.4064 48.3443 46.4917 48.54 46.52L51 46.87ZM43 38C39.6377 38 36.3509 37.003 33.5553 35.135C30.7597 33.267 28.5807 30.612 27.294 27.5056C26.0074 24.3993 25.6707 20.9811 26.3266 17.6835C26.9826 14.3858 28.6017 11.3567 30.9792 8.9792C33.3567 6.60171 36.3858 4.98262 39.6835 4.32668C42.9811 3.67073 46.3993 4.00738 49.5056 5.29407C52.612 6.58076 55.267 8.7597 57.135 11.5553C59.003 14.3509 60 17.6377 60 21C59.9936 25.5067 58.2005 29.8271 55.0138 33.0138C51.8271 36.2006 47.5067 37.9937 43 38Z"
+                                        fill="#ffffff" id="id_114"></path>
+                                    <path
+                                        d="M43 6C40.0333 6 37.1332 6.87973 34.6664 8.52796C32.1997 10.1762 30.2771 12.5189 29.1418 15.2597C28.0065 18.0006 27.7094 21.0166 28.2882 23.9264C28.867 26.8361 30.2956 29.5088 32.3934 31.6066C34.4912 33.7044 37.1639 35.133 40.0736 35.7118C42.9834 36.2906 45.9993 35.9935 48.7402 34.8582C51.4811 33.7229 53.8238 31.8003 55.472 29.3336C57.1203 26.8668 58 23.9667 58 21C57.9952 17.0232 56.4133 13.2107 53.6013 10.3987C50.7893 7.58665 46.9768 6.00476 43 6ZM52.86 29.45L51.49 28.07L50.07 29.49L51.45 30.86C49.3587 32.6564 46.7488 33.7389 44 33.95V32H42V33.95C39.2511 33.7389 36.6413 32.6564 34.55 30.86L35.93 29.49L34.51 28.07L33.14 29.45C31.3436 27.3587 30.2611 24.7488 30.05 22H32V20H30.05C30.2611 17.2512 31.3436 14.6413 33.14 12.55L34.51 13.93L35.93 12.51L34.55 11.14C36.6413 9.34358 39.2511 8.26111 42 8.05V10H44V8.05C46.7488 8.26111 49.3587 9.34358 51.45 11.14L50.07 12.51L51.49 13.93L52.86 12.55C54.6564 14.6413 55.7389 17.2512 55.95 20H54V22H55.95C55.7389 24.7488 54.6564 27.3587 52.86 29.45Z"
+                                        fill="#ffffff" id="id_115"></path>
+                                </svg>
+                            </div>
+                            <div class="home-services-box__content">
+                                <h5 class="mb-3 mt-3 text_22">Time sensitivity</h5>
+                                <p class="text_16">
+                                    Wait for minutes and the pleasant ride is here! You don’t
+                                    have to be anxious about missing out anything since you are
+                                    in safe hands.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-5">
+                        <div class="home-services-box position-relative">
+                            <div class="home-services-box__icon">
+                                <svg fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                    viewBox="0 0 123.328 123.328" xml:space="preserve" stroke="#fff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M49.489,63.315c-7.588,1.247-14.005,3.058-18.782,5.137c-1.689,0.736-3.24,2.933-3.389,4.771 c-0.096,1.211-0.146,2.438-0.146,3.673c0,1.234,0.051,2.461,0.146,3.672c0.148,1.837,1.7,4.035,3.389,4.77 c4.777,2.082,11.191,3.891,18.782,5.139c1.817,0.298,3.162-0.993,3.035-2.829c-0.244-3.567-0.372-7.173-0.372-10.75 c0-3.578,0.128-7.186,0.372-10.75C52.651,64.309,51.307,63.019,49.489,63.315z" />
+                                                <path
+                                                    d="M56.12,119.195c1.72,0.666,2.56-0.281,1.938-2.016c-1.849-5.16-3.274-11.252-4.262-17.786 c-0.273-1.822-1.936-3.487-3.76-3.761c-6.533-0.988-12.625-2.415-17.786-4.264c-1.734-0.62-2.683,0.221-2.017,1.939 C34.836,105.159,44.273,114.597,56.12,119.195z" />
+                                                <path
+                                                    d="M64.096,35.069c-2.082,4.779-3.892,11.19-5.138,18.781c-0.3,1.819,0.988,3.163,2.826,3.036 c3.567-0.246,7.174-0.372,10.752-0.372c3.579,0,7.183,0.126,10.749,0.372c1.838,0.127,3.127-1.217,2.828-3.036 c-1.246-7.587-3.058-14.002-5.136-18.781c-0.736-1.688-2.933-3.239-4.771-3.389c-1.21-0.099-2.437-0.146-3.671-0.146 c-1.237,0-2.462,0.05-3.674,0.146C67.027,31.831,64.831,33.382,64.096,35.069z" />
+                                                <path
+                                                    d="M56.12,34.598c-11.847,4.601-21.284,14.038-25.886,25.889c-0.664,1.718,0.282,2.558,2.017,1.938 c5.161-1.851,11.253-3.274,17.785-4.262c1.823-0.275,3.487-1.94,3.761-3.762c0.988-6.534,2.413-12.626,4.262-17.786 C58.682,34.88,57.84,33.933,56.12,34.598z" />
+                                                <path
+                                                    d="M91.27,54.4c0.273,1.821,1.938,3.486,3.761,3.762c6.532,0.987,12.625,2.411,17.785,4.259 c1.735,0.622,2.685-0.22,2.016-1.938c-4.601-11.849-14.036-21.286-25.888-25.887c-1.717-0.665-2.557,0.283-1.938,2.017 C88.857,41.774,90.282,47.867,91.27,54.4z" />
+                                                <path
+                                                    d="M117.75,73.226c-0.147-1.838-1.702-4.036-3.39-4.771c-4.777-2.081-11.194-3.889-18.782-5.135 c-1.816-0.3-3.161,0.989-3.035,2.828c0.245,3.565,0.371,7.174,0.371,10.75c0,3.578-0.126,7.186-0.371,10.753 c-0.126,1.838,1.219,3.128,3.035,2.827c7.588-1.246,14.005-3.058,18.782-5.137c1.691-0.735,3.241-2.937,3.39-4.771 c0.101-1.213,0.146-2.438,0.146-3.675C117.895,75.662,117.845,74.434,117.75,73.226z" />
+                                                <path
+                                                    d="M87.911,76.896c0-3.931-0.146-7.723-0.421-11.35c-0.137-1.836-1.771-3.471-3.606-3.607 c-3.627-0.272-7.416-0.421-11.351-0.421c-3.929,0-7.722,0.147-11.348,0.421c-1.837,0.138-3.472,1.771-3.61,3.607 c-0.272,3.626-0.421,7.419-0.421,11.35c0,3.93,0.148,7.723,0.421,11.35c0.14,1.835,1.773,3.475,3.61,3.609 c3.625,0.271,7.418,0.421,11.348,0.421s7.724-0.149,11.351-0.421c1.836-0.141,3.471-1.774,3.606-3.609 C87.766,84.619,87.911,80.827,87.911,76.896z" />
+                                                <path
+                                                    d="M112.817,91.37c-5.16,1.853-11.252,3.276-17.786,4.264c-1.822,0.272-3.486,1.938-3.761,3.761 c-0.988,6.531-2.413,12.626-4.261,17.786c-0.622,1.733,0.219,2.685,1.936,2.016c11.852-4.601,21.289-14.037,25.889-25.886 C115.5,91.59,114.552,90.75,112.817,91.37z" />
+                                                <path
+                                                    d="M83.283,96.905c-3.565,0.245-7.173,0.373-10.754,0.373c-3.577,0-7.179-0.128-10.748-0.373 c-1.837-0.126-3.127,1.219-2.827,3.036c1.248,7.59,3.058,14.004,5.136,18.782c0.735,1.689,2.934,3.24,4.77,3.389 c1.211,0.1,2.436,0.147,3.674,0.147c1.234,0,2.46-0.053,3.67-0.147c1.839-0.147,4.035-1.699,4.771-3.389 c2.082-4.778,3.891-11.192,5.138-18.782C86.409,98.123,85.12,96.779,83.283,96.905z" />
+                                                <path
+                                                    d="M37.556,22.22c0.357,0.273,0.657,0.167,0.823,0.05c-0.12,0.153-0.328,0.455-0.644,1.005c0,0-1.123,1.688-0.75,2.253 l0.007,0.01c0.378,0.573,2.365,0.203,2.365,0.203c0.628-0.075,0.987-0.147,1.181-0.195c-0.177,0.107-0.392,0.34-0.281,0.772 l1.011,3.391c0.016,0.051,0.037,0.096,0.057,0.14l2.663-2.288l0.218-2.881c0.016-0.221,0.062-0.494,0.062-0.494 s0.531-0.362,0.697-0.437l9.396-5.774l4.911,14.228c0.134,0.38,0.488,0.478,0.795,0.216l2.581-2.21 c0.307-0.264,0.5-0.799,0.433-1.202l-2.554-15.133l8.995-6.295c1.657-1.165,2.978-2.952,2.948-4.001 c-0.012-0.396-0.146-0.798-0.362-1.164l-0.005-0.009c-0.25-0.343-0.566-0.626-0.93-0.791c-0.946-0.438-3.115,0.065-4.839,1.128 l-9.333,5.776L44.104,0.188c-0.343-0.218-0.908-0.253-1.273-0.074l-3.048,1.497c-0.364,0.179-0.415,0.542-0.118,0.816 l11.131,10.134l-9.017,6.349c-0.132,0.124-0.676,0.471-0.676,0.471s-0.271-0.069-0.481-0.142l-2.733-0.938l-3.152,1.545 c0.033,0.036,0.064,0.073,0.109,0.105L37.556,22.22z" />
+                                                <g>
+                                                    <path
+                                                        d="M7.875,68.89c0.153-1.395,0.442-2.738,0.747-4.15c0.114-0.528,0.227-1.054,0.333-1.58 c0.117-0.688,0.322-1.331,0.54-2.012c0.109-0.341,0.217-0.681,0.316-1.023l0.931-2.974c0.283-0.663,0.553-1.327,0.822-1.986 c0.521-1.277,1.012-2.483,1.569-3.625l1.38-2.628c0.126-0.232,0.258-0.486,0.389-0.74c0.306-0.589,0.594-1.146,0.918-1.609 c0.405-0.612,0.766-1.18,1.122-1.741c0.652-1.027,1.269-1.998,1.921-2.882l3.082-3.965c0.682-0.764,1.4-1.535,2.09-2.277 l0.987-1.064c0.773-0.89,1.609-1.641,2.417-2.367l3.003-2.703c1.036-0.819,1.925-1.489,2.651-2.036 c0.241-0.182,0.464-0.35,0.669-0.506l1.248,1.716c-0.229,0.16-0.476,0.331-0.745,0.516c-0.772,0.533-1.713,1.183-2.769,1.948 l-0.11,0.086l-2.822,2.356c-0.771,0.633-1.644,1.351-2.5,2.266l-2.979,2.966L22.971,39l-3.061,3.616 c-0.729,0.901-1.378,1.834-2.005,2.737c-0.357,0.514-0.72,1.036-1.099,1.556c-0.444,0.573-0.806,1.208-1.155,1.82 c-0.122,0.213-0.244,0.428-0.371,0.64l-1.423,2.449c-0.629,1.163-1.163,2.327-1.678,3.452c-0.295,0.644-0.593,1.294-0.908,1.944 l-0.082,0.196l-1.017,2.838c-0.108,0.321-0.211,0.599-0.313,0.875c-0.255,0.691-0.545,1.475-0.719,2.323 c-0.105,0.427-0.235,0.924-0.365,1.424C8.438,66.162,8.092,67.49,7.875,68.89z" />
+                                                    <path
+                                                        d="M34.177,24.192c0,0-0.456,0.347-1.313,0.998c-0.856,0.66-2.113,1.579-3.712,2.844c-0.795,0.716-1.676,1.509-2.635,2.371 c-0.954,0.864-2.015,1.777-2.966,2.873c-0.988,1.073-2.056,2.197-3.143,3.414c-1.002,1.29-2.055,2.646-3.155,4.061 c-1.062,1.439-2.01,3.056-3.071,4.662c-0.554,0.79-0.964,1.688-1.438,2.564c-0.464,0.881-0.933,1.776-1.408,2.684 c-0.897,1.84-1.628,3.824-2.473,5.795c-0.321,1.027-0.645,2.065-0.974,3.113c-0.304,1.053-0.708,2.087-0.895,3.194 c-0.44,2.191-1.018,4.39-1.178,6.691c-0.11,1.146-0.287,2.287-0.34,3.445c-0.012,1.162-0.022,2.33-0.034,3.501 c0.008,0.586-0.036,1.171,0.015,1.758l0.166,1.76c0.125,1.174,0.196,2.354,0.369,3.523l0.719,3.485 c0.136,0.576,0.204,1.17,0.396,1.732l0.55,1.695c0.386,1.121,0.696,2.27,1.146,3.363l1.478,3.226 c0.443,1.095,1.075,2.09,1.691,3.088c0.629,1.013,1.17,1.973,1.868,3.012c0.682,0.901,1.361,1.797,2.037,2.691 c0.752,0.875,1.541,1.734,2.304,2.591c1.601,1.625,3.229,3.156,4.984,4.487c3.47,2.701,7.187,4.794,10.862,6.372 c3.697,1.55,7.358,2.516,10.761,3.199c1.72,0.244,3.352,0.58,4.932,0.666c0.787,0.067,1.554,0.134,2.298,0.196 c0.747,0.019,1.472,0.033,2.175,0.049c0.555,0.005,1.094,0.03,1.618,0.03c0.141,0,0.282-0.002,0.421-0.006 c0.654-0.03,1.286-0.059,1.894-0.087c0.606-0.027,1.188-0.054,1.742-0.079c0.553-0.062,1.081-0.119,1.581-0.175 c0.999-0.12,1.896-0.188,2.665-0.315c0.771-0.135,1.424-0.25,1.955-0.342c1.06-0.186,1.625-0.285,1.625-0.285 s-0.569,0.075-1.636,0.216c-0.532,0.07-1.189,0.156-1.962,0.259c-0.773,0.097-1.671,0.125-2.669,0.202 c-0.5,0.034-1.025,0.069-1.577,0.106c-0.555,0.003-1.133,0.004-1.736,0.006c-0.603,0.003-1.229,0.004-1.881,0.007 c-0.65-0.007-1.323-0.072-2.018-0.107c-0.693-0.045-1.41-0.091-2.147-0.139c-0.732-0.095-1.485-0.191-2.259-0.291 c-1.554-0.148-3.147-0.551-4.823-0.859c-3.312-0.813-6.849-1.911-10.372-3.565c-3.503-1.684-6.999-3.855-10.21-6.579 c-1.621-1.34-3.121-2.882-4.562-4.47c-0.674-0.823-1.353-1.651-2.035-2.484c-0.638-0.92-1.278-1.846-1.922-2.773 c-2.151-3.709-4.256-7.753-5.248-12.076l-0.45-1.599c-0.157-0.529-0.194-1.091-0.299-1.634L9.356,82.99 c-0.114-1.096-0.13-2.2-0.201-3.293l-0.089-1.637c-0.026-0.544,0.044-1.091,0.06-1.635c0.055-1.086,0.11-2.167,0.166-3.243 c0.095-1.071,0.31-2.129,0.454-3.185c0.229-2.121,0.866-4.145,1.353-6.151c0.208-1.015,0.633-1.962,0.955-2.924 c0.344-0.955,0.682-1.903,1.018-2.84c0.869-1.795,1.614-3.597,2.515-5.263c0.477-0.82,0.946-1.629,1.409-2.426 c0.473-0.789,0.878-1.601,1.426-2.31c1.052-1.441,1.978-2.895,3.016-4.18c1.065-1.26,2.088-2.467,3.061-3.615 c1.065-1.063,2.075-2.069,3.026-3.015c0.925-0.987,1.892-1.735,2.762-2.46c0.867-0.727,1.665-1.393,2.385-1.995 c1.6-1.159,2.932-2.05,3.803-2.667c0.884-0.613,1.355-0.942,1.355-0.942L34.177,24.192L34.177,24.192z M67.694,122.04h0.005 H67.694z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="home-services-box__content">
+                                <h5 class="mb-3 mt-3 text_22">Our Drive</h5>
+                                <p class="text_16">
+                                    Experience a smooth ride from your pick up location to the
+                                    destination.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-5">
+                        <div class="home-services-box position-relative">
+                            <div class="home-services-box__icon">
+                                <svg id="Layer_1" data-name="Layer 1" width="35" height="35"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #3b4551;
+                                            }
+
+                                            .cls-2 {
+                                                fill: #2b77c0;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <title>a</title>
+                                    <path class="cls-1"
+                                        d="M63.80732,1.63181A62.06134,62.06134,0,0,0,2.214,54.11474l11.17393,1.779a51.06376,51.06376,0,0,1,101.47831,8.11042,51.472,51.472,0,0,1-1.00137,10.11869l11.09382,2.2265A62.42447,62.42447,0,0,0,63.80732,1.63181Z"
+                                        id="id_101" style="fill: rgb(255, 255, 255)"></path>
+                                    <path class="cls-1"
+                                        d="M74.85625,102.23979a41.71772,41.71772,0,0,1-23.761,3.39448A42.59157,42.59157,0,0,1,38.762,101.84373a43.02343,43.02343,0,0,1-11.20155-7.52427A47.19186,47.19186,0,0,1,18.67827,83.5138a54.07968,54.07968,0,0,1-5.57263-13.408l-5.50167.6635-5.785.01657.04005.67679A62.384,62.384,0,0,0,110.98919,104.78V84.84476L91.093,87.55882A37.81653,37.81653,0,0,1,74.85625,102.23979Z"
+                                        id="id_102" style="fill: rgb(255, 255, 255)"></path>
+                                    <path class="cls-2"
+                                        d="M52.4497,50.54364a2.00433,2.00433,0,0,0-2.00412,2.00412v9.96986a4.98952,4.98952,0,0,0,5.15275,5.15275h5.34249v7.78187a2.004,2.004,0,1,0,4.00808,0V52.54776a2.004,2.004,0,1,0-4.00808,0V63.66247H55.59832a1.012,1.012,0,0,1-1.14484-1.14484V52.54776A2.00414,2.00414,0,0,0,52.4497,50.54364Z"
+                                        id="id_103" style="fill: rgb(255, 255, 255)"></path>
+                                    <path class="cls-2"
+                                        d="M30.8104,74.0353a2.004,2.004,0,0,0,1.41694,3.42107H46.04955a2.004,2.004,0,0,0,0-4.00808H37.065l8.52081-8.52064A8.426,8.426,0,0,0,33.66966,53.0115L32.245,54.43621a2.00373,2.00373,0,0,0,2.83371,2.83371l1.42471-1.42471a4.41852,4.41852,0,0,1,6.24873,6.24873Z"
+                                        id="id_104" style="fill: rgb(255, 255, 255)"></path>
+                                    <path class="cls-2"
+                                        d="M84.99773,78.0394a1.98521,1.98521,0,0,0,.76018.15176,2.00568,2.00568,0,0,0,1.85426-1.24377L97.62623,52.574a2.004,2.004,0,0,0-1.8534-2.76517H81.163a2.004,2.004,0,1,0,0,4.0079H92.78253l-8.87681,21.608A2.00262,2.00262,0,0,0,84.99773,78.0394Z"
+                                        id="id_105" style="fill: rgb(255, 255, 255)"></path>
+                                    <path class="cls-2"
+                                        d="M69.34732,81.92818A2.00423,2.00423,0,0,0,71.32089,80.26L76.738,48.41279a2.00386,2.00386,0,0,0-3.9511-.67126L67.36979,79.58877a2.004,2.004,0,0,0,1.97754,2.33941Z"
+                                        id="id_106" style="fill: rgb(255, 255, 255)"></path>
+                                </svg>
+                            </div>
+                            <div class="home-services-box__content">
+                                <h5 class="mb-3 mt-3 text_22">Availability</h5>
+                                <p class="text_16">
+                                    We operate 24/7 throughout the year. Our super heroes will
+                                    save you, even if you are stuck in the middle of the night.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 mb-5">
+                        <div class="home-services-box position-relative">
+                            <div class="home-services-box__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" width="32 "
+                                    fill="#fff" text-rendering="geometricPrecision" image-rendering="optimizeQuality"
+                                    fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 491.96">
+                                    <path fill-rule="nonzero"
+                                        d="m243.9 135.59-138.42 46.1 150.83 68.41 150.83-66.48-112.62-38.59v-20.84l142.87 48.93c4.39 1.78 7.05 5.76 6.66 10.19.03.21.03.46.03.7v180.47l32.6 18.81-6.37-19.21c-3.6-11.24 20.69-21.6 25.6-3.91l15.55 45.94c2.04 7.73-1.79 14.56-9.49 16.76l-47.9 9.78c-15.66 4.04-24.15-19.22-6.77-25.34l17.54-3.14-116.42-67.2c-5.73-3.32-7.7-10.66-4.39-16.4 3.31-5.74 10.66-7.7 16.39-4.39l63.87 36.87V197.61l-158.17 69.7v198.7l133.22-67.71 20.38 11.76-158.36 80.47a9.928 9.928 0 0 1-10.47-.15L94.48 408.79l20.21-11.66 131.67 68.69v-198.6L87.64 195.26v157.82l63.94-36.9c5.73-3.31 13.08-1.35 16.39 4.39 3.31 5.74 1.34 13.08-4.39 16.4l-116.42 67.2 17.54 3.14c17.38 6.12 8.89 29.38-6.77 25.34l-47.9-9.78c-7.7-2.2-11.53-9.03-9.49-16.76l15.55-45.94c4.91-17.69 29.2-7.33 25.6 3.91l-6.37 19.21 32.6-18.81-.03-184.06c0-5.38 3.67-7.8 8.48-9.79l167.53-55.77-.01-69.04-13.46 15.12c-7.93 8.73-29.05-7.12-16.18-20.22l32.03-36.43c5.67-5.64 13.5-5.73 19.25-.16l32.41 36.59c11.33 11.54-4.56 30.52-18.55 18.53L267.9 45.64l.01 134.42c-.01 6.62-5.38 11.99-12.01 12-6.63 0-12-5.38-12-12v-44.47z" />
+                                </svg>
+                            </div>
+                            <div class="home-services-box__content">
+                                <h5 class="mb-3 mt-3 text_22">Flexibility</h5>
+                                <p class="text_16">
+                                    Do we change the drop off locations or add a few amidst the
+                                    drive? Yes, you do. Tackle the inevitable scenarios during
+                                    your drive with ease.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefits-section">
+            <div class="container mx-auto">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="benefits-section-img h-100">
+                            <img src="./assets/img/danijela-prijovic-6YJXtUrbYA8-unsplash.webp" alt=""
+                                class="w-100 h-100" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mt-5">
+                        <div class="row benefits-section-box__wrapper">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="benefits-section-box">
+                                    <div class="benefits-section-box__icon mb-4">
+                                        <svg fill=" #f0a44b" version="1.1" id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50"
+                                            viewBox="0 0 123.328 123.328" xml:space="preserve" stroke="#fff">
+
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+
+                                            <g id="SVGRepo_iconCarrier">
+                                                <g>
+                                                    <g>
+                                                        <path
+                                                            d="M49.489,63.315c-7.588,1.247-14.005,3.058-18.782,5.137c-1.689,0.736-3.24,2.933-3.389,4.771 c-0.096,1.211-0.146,2.438-0.146,3.673c0,1.234,0.051,2.461,0.146,3.672c0.148,1.837,1.7,4.035,3.389,4.77 c4.777,2.082,11.191,3.891,18.782,5.139c1.817,0.298,3.162-0.993,3.035-2.829c-0.244-3.567-0.372-7.173-0.372-10.75 c0-3.578,0.128-7.186,0.372-10.75C52.651,64.309,51.307,63.019,49.489,63.315z" />
+                                                        <path
+                                                            d="M56.12,119.195c1.72,0.666,2.56-0.281,1.938-2.016c-1.849-5.16-3.274-11.252-4.262-17.786 c-0.273-1.822-1.936-3.487-3.76-3.761c-6.533-0.988-12.625-2.415-17.786-4.264c-1.734-0.62-2.683,0.221-2.017,1.939 C34.836,105.159,44.273,114.597,56.12,119.195z" />
+                                                        <path
+                                                            d="M64.096,35.069c-2.082,4.779-3.892,11.19-5.138,18.781c-0.3,1.819,0.988,3.163,2.826,3.036 c3.567-0.246,7.174-0.372,10.752-0.372c3.579,0,7.183,0.126,10.749,0.372c1.838,0.127,3.127-1.217,2.828-3.036 c-1.246-7.587-3.058-14.002-5.136-18.781c-0.736-1.688-2.933-3.239-4.771-3.389c-1.21-0.099-2.437-0.146-3.671-0.146 c-1.237,0-2.462,0.05-3.674,0.146C67.027,31.831,64.831,33.382,64.096,35.069z" />
+                                                        <path
+                                                            d="M56.12,34.598c-11.847,4.601-21.284,14.038-25.886,25.889c-0.664,1.718,0.282,2.558,2.017,1.938 c5.161-1.851,11.253-3.274,17.785-4.262c1.823-0.275,3.487-1.94,3.761-3.762c0.988-6.534,2.413-12.626,4.262-17.786 C58.682,34.88,57.84,33.933,56.12,34.598z" />
+                                                        <path
+                                                            d="M91.27,54.4c0.273,1.821,1.938,3.486,3.761,3.762c6.532,0.987,12.625,2.411,17.785,4.259 c1.735,0.622,2.685-0.22,2.016-1.938c-4.601-11.849-14.036-21.286-25.888-25.887c-1.717-0.665-2.557,0.283-1.938,2.017 C88.857,41.774,90.282,47.867,91.27,54.4z" />
+                                                        <path
+                                                            d="M117.75,73.226c-0.147-1.838-1.702-4.036-3.39-4.771c-4.777-2.081-11.194-3.889-18.782-5.135 c-1.816-0.3-3.161,0.989-3.035,2.828c0.245,3.565,0.371,7.174,0.371,10.75c0,3.578-0.126,7.186-0.371,10.753 c-0.126,1.838,1.219,3.128,3.035,2.827c7.588-1.246,14.005-3.058,18.782-5.137c1.691-0.735,3.241-2.937,3.39-4.771 c0.101-1.213,0.146-2.438,0.146-3.675C117.895,75.662,117.845,74.434,117.75,73.226z" />
+                                                        <path
+                                                            d="M87.911,76.896c0-3.931-0.146-7.723-0.421-11.35c-0.137-1.836-1.771-3.471-3.606-3.607 c-3.627-0.272-7.416-0.421-11.351-0.421c-3.929,0-7.722,0.147-11.348,0.421c-1.837,0.138-3.472,1.771-3.61,3.607 c-0.272,3.626-0.421,7.419-0.421,11.35c0,3.93,0.148,7.723,0.421,11.35c0.14,1.835,1.773,3.475,3.61,3.609 c3.625,0.271,7.418,0.421,11.348,0.421s7.724-0.149,11.351-0.421c1.836-0.141,3.471-1.774,3.606-3.609 C87.766,84.619,87.911,80.827,87.911,76.896z" />
+                                                        <path
+                                                            d="M112.817,91.37c-5.16,1.853-11.252,3.276-17.786,4.264c-1.822,0.272-3.486,1.938-3.761,3.761 c-0.988,6.531-2.413,12.626-4.261,17.786c-0.622,1.733,0.219,2.685,1.936,2.016c11.852-4.601,21.289-14.037,25.889-25.886 C115.5,91.59,114.552,90.75,112.817,91.37z" />
+                                                        <path
+                                                            d="M83.283,96.905c-3.565,0.245-7.173,0.373-10.754,0.373c-3.577,0-7.179-0.128-10.748-0.373 c-1.837-0.126-3.127,1.219-2.827,3.036c1.248,7.59,3.058,14.004,5.136,18.782c0.735,1.689,2.934,3.24,4.77,3.389 c1.211,0.1,2.436,0.147,3.674,0.147c1.234,0,2.46-0.053,3.67-0.147c1.839-0.147,4.035-1.699,4.771-3.389 c2.082-4.778,3.891-11.192,5.138-18.782C86.409,98.123,85.12,96.779,83.283,96.905z" />
+                                                        <path
+                                                            d="M37.556,22.22c0.357,0.273,0.657,0.167,0.823,0.05c-0.12,0.153-0.328,0.455-0.644,1.005c0,0-1.123,1.688-0.75,2.253 l0.007,0.01c0.378,0.573,2.365,0.203,2.365,0.203c0.628-0.075,0.987-0.147,1.181-0.195c-0.177,0.107-0.392,0.34-0.281,0.772 l1.011,3.391c0.016,0.051,0.037,0.096,0.057,0.14l2.663-2.288l0.218-2.881c0.016-0.221,0.062-0.494,0.062-0.494 s0.531-0.362,0.697-0.437l9.396-5.774l4.911,14.228c0.134,0.38,0.488,0.478,0.795,0.216l2.581-2.21 c0.307-0.264,0.5-0.799,0.433-1.202l-2.554-15.133l8.995-6.295c1.657-1.165,2.978-2.952,2.948-4.001 c-0.012-0.396-0.146-0.798-0.362-1.164l-0.005-0.009c-0.25-0.343-0.566-0.626-0.93-0.791c-0.946-0.438-3.115,0.065-4.839,1.128 l-9.333,5.776L44.104,0.188c-0.343-0.218-0.908-0.253-1.273-0.074l-3.048,1.497c-0.364,0.179-0.415,0.542-0.118,0.816 l11.131,10.134l-9.017,6.349c-0.132,0.124-0.676,0.471-0.676,0.471s-0.271-0.069-0.481-0.142l-2.733-0.938l-3.152,1.545 c0.033,0.036,0.064,0.073,0.109,0.105L37.556,22.22z" />
+                                                        <g>
+                                                            <path
+                                                                d="M7.875,68.89c0.153-1.395,0.442-2.738,0.747-4.15c0.114-0.528,0.227-1.054,0.333-1.58 c0.117-0.688,0.322-1.331,0.54-2.012c0.109-0.341,0.217-0.681,0.316-1.023l0.931-2.974c0.283-0.663,0.553-1.327,0.822-1.986 c0.521-1.277,1.012-2.483,1.569-3.625l1.38-2.628c0.126-0.232,0.258-0.486,0.389-0.74c0.306-0.589,0.594-1.146,0.918-1.609 c0.405-0.612,0.766-1.18,1.122-1.741c0.652-1.027,1.269-1.998,1.921-2.882l3.082-3.965c0.682-0.764,1.4-1.535,2.09-2.277 l0.987-1.064c0.773-0.89,1.609-1.641,2.417-2.367l3.003-2.703c1.036-0.819,1.925-1.489,2.651-2.036 c0.241-0.182,0.464-0.35,0.669-0.506l1.248,1.716c-0.229,0.16-0.476,0.331-0.745,0.516c-0.772,0.533-1.713,1.183-2.769,1.948 l-0.11,0.086l-2.822,2.356c-0.771,0.633-1.644,1.351-2.5,2.266l-2.979,2.966L22.971,39l-3.061,3.616 c-0.729,0.901-1.378,1.834-2.005,2.737c-0.357,0.514-0.72,1.036-1.099,1.556c-0.444,0.573-0.806,1.208-1.155,1.82 c-0.122,0.213-0.244,0.428-0.371,0.64l-1.423,2.449c-0.629,1.163-1.163,2.327-1.678,3.452c-0.295,0.644-0.593,1.294-0.908,1.944 l-0.082,0.196l-1.017,2.838c-0.108,0.321-0.211,0.599-0.313,0.875c-0.255,0.691-0.545,1.475-0.719,2.323 c-0.105,0.427-0.235,0.924-0.365,1.424C8.438,66.162,8.092,67.49,7.875,68.89z" />
+                                                            <path
+                                                                d="M34.177,24.192c0,0-0.456,0.347-1.313,0.998c-0.856,0.66-2.113,1.579-3.712,2.844c-0.795,0.716-1.676,1.509-2.635,2.371 c-0.954,0.864-2.015,1.777-2.966,2.873c-0.988,1.073-2.056,2.197-3.143,3.414c-1.002,1.29-2.055,2.646-3.155,4.061 c-1.062,1.439-2.01,3.056-3.071,4.662c-0.554,0.79-0.964,1.688-1.438,2.564c-0.464,0.881-0.933,1.776-1.408,2.684 c-0.897,1.84-1.628,3.824-2.473,5.795c-0.321,1.027-0.645,2.065-0.974,3.113c-0.304,1.053-0.708,2.087-0.895,3.194 c-0.44,2.191-1.018,4.39-1.178,6.691c-0.11,1.146-0.287,2.287-0.34,3.445c-0.012,1.162-0.022,2.33-0.034,3.501 c0.008,0.586-0.036,1.171,0.015,1.758l0.166,1.76c0.125,1.174,0.196,2.354,0.369,3.523l0.719,3.485 c0.136,0.576,0.204,1.17,0.396,1.732l0.55,1.695c0.386,1.121,0.696,2.27,1.146,3.363l1.478,3.226 c0.443,1.095,1.075,2.09,1.691,3.088c0.629,1.013,1.17,1.973,1.868,3.012c0.682,0.901,1.361,1.797,2.037,2.691 c0.752,0.875,1.541,1.734,2.304,2.591c1.601,1.625,3.229,3.156,4.984,4.487c3.47,2.701,7.187,4.794,10.862,6.372 c3.697,1.55,7.358,2.516,10.761,3.199c1.72,0.244,3.352,0.58,4.932,0.666c0.787,0.067,1.554,0.134,2.298,0.196 c0.747,0.019,1.472,0.033,2.175,0.049c0.555,0.005,1.094,0.03,1.618,0.03c0.141,0,0.282-0.002,0.421-0.006 c0.654-0.03,1.286-0.059,1.894-0.087c0.606-0.027,1.188-0.054,1.742-0.079c0.553-0.062,1.081-0.119,1.581-0.175 c0.999-0.12,1.896-0.188,2.665-0.315c0.771-0.135,1.424-0.25,1.955-0.342c1.06-0.186,1.625-0.285,1.625-0.285 s-0.569,0.075-1.636,0.216c-0.532,0.07-1.189,0.156-1.962,0.259c-0.773,0.097-1.671,0.125-2.669,0.202 c-0.5,0.034-1.025,0.069-1.577,0.106c-0.555,0.003-1.133,0.004-1.736,0.006c-0.603,0.003-1.229,0.004-1.881,0.007 c-0.65-0.007-1.323-0.072-2.018-0.107c-0.693-0.045-1.41-0.091-2.147-0.139c-0.732-0.095-1.485-0.191-2.259-0.291 c-1.554-0.148-3.147-0.551-4.823-0.859c-3.312-0.813-6.849-1.911-10.372-3.565c-3.503-1.684-6.999-3.855-10.21-6.579 c-1.621-1.34-3.121-2.882-4.562-4.47c-0.674-0.823-1.353-1.651-2.035-2.484c-0.638-0.92-1.278-1.846-1.922-2.773 c-2.151-3.709-4.256-7.753-5.248-12.076l-0.45-1.599c-0.157-0.529-0.194-1.091-0.299-1.634L9.356,82.99 c-0.114-1.096-0.13-2.2-0.201-3.293l-0.089-1.637c-0.026-0.544,0.044-1.091,0.06-1.635c0.055-1.086,0.11-2.167,0.166-3.243 c0.095-1.071,0.31-2.129,0.454-3.185c0.229-2.121,0.866-4.145,1.353-6.151c0.208-1.015,0.633-1.962,0.955-2.924 c0.344-0.955,0.682-1.903,1.018-2.84c0.869-1.795,1.614-3.597,2.515-5.263c0.477-0.82,0.946-1.629,1.409-2.426 c0.473-0.789,0.878-1.601,1.426-2.31c1.052-1.441,1.978-2.895,3.016-4.18c1.065-1.26,2.088-2.467,3.061-3.615 c1.065-1.063,2.075-2.069,3.026-3.015c0.925-0.987,1.892-1.735,2.762-2.46c0.867-0.727,1.665-1.393,2.385-1.995 c1.6-1.159,2.932-2.05,3.803-2.667c0.884-0.613,1.355-0.942,1.355-0.942L34.177,24.192L34.177,24.192z M67.694,122.04h0.005 H67.694z" />
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+
+                                        </svg>
+                                    </div>
+                                    <div class="benefits-section-box__content">
+                                        <h5 class="mb-3">Business trips</h5>
+                                        <p>
+                                            Enjoy our cozy rides while you close deals during the
+                                            drive.Now, Business meetings won't be a hush-hush, since
+                                            you made the most relevant choice by choosing us.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="benefits-section-box">
+                                    <div class="benefits-section-box__icon mb-4">
+                                        <svg version="1.1" id="_x31_-outline-expand" xmlns="http://www.w3.org/2000/svg"
+                                            width="50" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 64 64" style="enable-background: new 0 0 64 64"
+                                            xml:space="preserve">
+                                            <polygon style="fill: #f0a44b"
+                                                points="35.466,14.965 25.893,1.422 20.255,3.474 25.727,18.509 "
+                                                id="id_101"></polygon>
+                                            <polygon style="fill:#f0a44b"
+                                                points="10.881,23.912 5.138,17.489 1.379,18.857 4.115,26.375 "
+                                                id="id_102"></polygon>
+                                            <path style="fill: #f0a44b" d="M62.379,16.874c-0.726-1.997-2.878-3.046-4.889-2.451l-5.875,2.113l-0.684-1.88l4.153-1.493
+                                                l-1.657-1.009c-1.038-0.632-2.307-0.758-3.449-0.342L4.799,28.254l2.052,5.638l21.188-0.263l2.819-1.026l5.814,15.975l5.639-2.052
+                                                l-1.458-17.56l19.135-6.964C62.065,21.245,63.135,18.95,62.379,16.874z M38.714,19.103l0.684,1.879l-1.879,0.684l-0.684-1.879
+                                                L38.714,19.103z M34.955,20.471l0.684,1.879l-1.879,0.684l-0.684-1.879L34.955,20.471z M31.196,21.839l0.684,1.879l-1.879,0.684
+                                                l-0.684-1.879L31.196,21.839z M14.967,29.875l-0.685-1.879l1.879-0.685l0.685,1.879L14.967,29.875z M18.726,28.506l-0.685-1.879
+                                                l1.879-0.685l0.685,1.879L18.726,28.506z M22.483,27.138L21.8,25.259l1.879-0.684l0.684,1.879L22.483,27.138z M26.242,25.77
+                                                l-0.684-1.879l1.879-0.684l0.684,1.879L26.242,25.77z M41.277,20.297l-0.684-1.879l1.879-0.684l0.684,1.879L41.277,20.297z
+                                                 M45.036,18.929l-0.684-1.879l1.879-0.684l0.684,1.879L45.036,18.929z"
+                                                id="id_103"></path>
+                                            <path style="fill: #f0a44b"
+                                                d="M19,54h17v-2H19c-2.206,0-4-1.794-4-4s1.794-4,4-4h6.184c0.414,1.162,1.513,2,2.816,2
+                                                c1.656,0,3-1.344,3-3s-1.344-3-3-3c-1.304,0-2.403,0.838-2.816,2H19c-3.309,0-6,2.691-6,6S15.691,54,19,54z"
+                                                id="id_104"></path>
+                                            <rect x="38" y="52" style="fill: #f0a44b" width="2" height="2" id="id_105">
+                                            </rect>
+                                            <path style="fill: #f0a44b" d="M50.5,52H42v2h8.5c1.379,0,2.5,1.122,2.5,2.5S51.879,59,50.5,59H19v2h31.5c2.481,0,4.5-2.019,4.5-4.5
+                                                S52.981,52,50.5,52z" id="id_106"></path>
+                                            <path style="fill: #f0a44b" d="M5,57c-1.656,0-3,1.344-3,3s1.344,3,3,3c1.304,0,2.403-0.838,2.816-2H17v-2H7.816
+                                                C7.403,57.838,6.304,57,5,57z" id="id_107"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="benefits-section-box__content">
+                                        <h5 class="mb-3">Flight runs</h5>
+                                        <p>
+                                            We help you catch your flights swiftly and safely which
+                                            is not less from a flight.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="benefits-section-box">
+                                    <div class="benefits-section-box__icon mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="60"
+                                            version="1.1" style="
+                          shape-rendering: geometricPrecision;
+                          text-rendering: geometricPrecision;
+                          image-rendering: optimizeQuality;
+                          fill-rule: evenodd;
+                          clip-rule: evenodd;
+                        " viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <defs>
+                                                <style type="text/css">
+                                                    .fil0 {
+                                                        fill: black;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <g id="Layer_x0020_1">
+                                                <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                                                <g id="_570681032">
+                                                    <g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M399 336c-7,0 -15,-3 -21,-9 -3,-3 -3,-7 0,-10 3,-3 7,-3 10,0 6,6 17,6 23,0 5,-6 5,-16 0,-22 -4,-4 -10,-10 -17,-17 -12,-13 -28,-29 -34,-33 -16,-8 -31,-16 -46,-24 -15,-8 -31,-16 -46,-24 0,0 0,0 0,0 -4,-2 -6,-1 -7,-1 -7,2 -13,14 -16,20 -4,9 -12,15 -22,15 -11,1 -23,-4 -29,-13 -6,-9 -6,-19 0,-29 16,-30 48,-77 82,-61 25,11 65,29 71,31 3,-1 9,-4 25,-13l2 -1c4,-2 8,-1 10,2 2,4 1,8 -3,10l-2 1c-25,15 -31,17 -36,14 -9,-3 -53,-23 -73,-32 0,0 0,0 0,0 -25,-11 -55,39 -64,55 -3,6 -3,11 0,15 3,5 9,8 16,7 3,0 8,-1 10,-7 0,0 1,0 1,0 5,-12 12,-24 24,-28 5,-1 11,-1 17,3 16,8 31,16 46,24 15,8 31,16 46,24 0,0 0,0 0,0 8,4 20,17 38,35 6,7 13,13 16,17 1,0 1,0 1,0 10,12 10,30 0,42 0,0 0,0 0,0 -6,6 -14,9 -22,9z"
+                                                                id="id_101" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M161 185c-1,0 -2,0 -3,-1l-27 -14c-4,-1 -5,-6 -3,-9 2,-3 6,-5 9,-3l21 11c10,-20 23,-31 38,-35 22,-5 39,8 40,9 3,2 4,6 2,9 -3,3 -7,4 -10,2 0,-1 -14,-10 -29,-6 -12,3 -23,14 -32,33 0,2 -2,3 -4,4 -1,0 -1,0 -2,0z"
+                                                                id="id_102" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M404 285c-3,0 -5,-1 -6,-3 -2,-4 -1,-8 3,-10l36 -20c3,-2 7,-1 9,3 2,3 1,7 -3,9l-36 20c-1,1 -2,1 -3,1z"
+                                                                id="id_103" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M196 404c-7,0 -13,-2 -18,-7 -5,-5 -7,-11 -7,-17 0,-7 2,-13 7,-18 3,-2 7,-2 10,0 3,3 3,8 0,10 -2,2 -3,5 -3,8 0,3 1,5 3,7 2,2 5,4 8,4 3,0 6,-2 8,-4l24 -24c2,-2 3,-4 3,-7 0,-3 -1,-6 -3,-8 -2,-2 -5,-3 -8,-3 -3,0 -6,1 -8,3 -3,3 -7,3 -10,0 -3,-2 -3,-7 0,-10 5,-4 11,-7 18,-7 7,0 13,3 18,7 5,5 7,11 7,18 0,6 -2,12 -7,17l-24 24c-5,5 -11,7 -18,7z"
+                                                                id="id_104" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M170 379c-6,0 -12,-2 -17,-7 -5,-5 -7,-11 -7,-18 0,-7 2,-13 7,-18l36 -35c10,-9 25,-9 35,0 10,10 10,25 0,35l-36 36c-5,5 -11,7 -18,7zm36 -71c-2,0 -5,1 -7,3l-36 35c-4,4 -4,12 0,16 4,4 11,4 15,0l36 -36c4,-4 4,-11 0,-15 -2,-2 -5,-3 -8,-3z"
+                                                                id="id_105" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M145 353c-6,0 -12,-2 -17,-7 -4,-4 -7,-10 -7,-16 -1,-7 2,-14 7,-19l30 -30c5,-4 11,-7 17,-7 7,0 13,3 18,7 4,5 7,11 7,18 0,6 -2,12 -7,17 -3,3 -7,3 -10,0 -3,-3 -3,-7 0,-10 2,-2 3,-5 3,-7 0,-3 -1,-6 -3,-8 -2,-2 -5,-3 -8,-3 -3,0 -5,1 -7,3l-30 30c-2,2 -4,5 -4,8 1,3 2,5 3,7 0,0 1,0 1,0 2,2 4,3 7,3 3,0 6,-1 8,-3 3,-3 7,-3 10,0 3,3 3,7 0,10 -5,5 -11,7 -18,7z"
+                                                                id="id_106" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M120 328c-7,0 -13,-2 -18,-7 -10,-10 -10,-25 0,-35l10 -10c10,-10 25,-10 35,0 10,10 10,26 0,36 -2,2 -5,3 -7,2 1,2 0,5 -2,7 -5,5 -12,7 -18,7zm10 -45c-3,0 -6,1 -8,3l-10 10c-4,4 -4,11 0,15 4,5 12,5 16,0 2,-2 5,-2 7,-1 -1,-3 0,-6 2,-8 4,-4 4,-12 0,-16 -2,-2 -5,-3 -7,-3z"
+                                                                id="id_107" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M107 299c-1,0 -2,0 -3,-1l-35 -20c-4,-2 -5,-6 -3,-9 2,-4 6,-5 10,-3l35 20c3,2 4,6 2,10 -1,2 -4,3 -6,3z"
+                                                                id="id_108" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M283 415c-8,0 -15,-3 -21,-9l-30 -29c-3,-3 -3,-7 0,-10 3,-3 7,-3 10,0l30 29c0,0 0,0 0,0 6,6 16,6 22,0 6,-6 6,-16 0,-22 -3,-3 -3,-7 0,-10 3,-3 7,-3 10,0 12,12 12,30 0,42 -6,6 -14,9 -21,9z"
+                                                                id="id_109" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M335 403c-8,0 -15,-3 -21,-9l-49 -50c-3,-3 -3,-7 0,-10 3,-2 7,-2 10,0l49 50c6,7 17,7 23,0 6,-6 6,-16 0,-23 -3,-2 -3,-7 0,-10 3,-2 7,-2 10,0 6,6 9,14 9,22 0,8 -3,16 -9,21 -6,6 -13,9 -22,9z"
+                                                                id="id_110" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M377 380c-7,0 -15,-3 -21,-9l-59 -59c-3,-3 -3,-7 0,-10 3,-3 7,-3 10,0l59 59c6,6 17,6 23,0 6,-6 6,-17 0,-23l-59 -59c-3,-3 -3,-7 0,-10 3,-3 7,-3 10,0l59 59c12,12 12,31 0,43 -6,6 -14,9 -22,9z"
+                                                                id="id_111" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M454 280c-7,0 -13,-4 -16,-11l-70 -121c-3,-4 -4,-9 -3,-14 1,-5 5,-10 10,-12l38 -22c5,-3 10,-4 15,-2 5,1 9,4 11,9l70 121c3,5 4,10 2,15 -1,5 -4,9 -9,11l-38 23c-1,0 -1,0 -1,0 -3,2 -6,3 -9,3zm-31 -169c0,0 -1,0 -2,1 0,0 0,0 -1,0l-39 22c0,0 0,0 0,0 -1,1 -2,2 -2,3 0,1 0,2 1,3 0,0 0,0 0,1l70 122c0,0 0,0 0,0 2,3 5,3 7,2l39 -23c0,0 0,0 0,0 1,-1 2,-1 2,-2 0,-1 0,-3 -1,-4 0,0 0,0 0,0l-70 -122c0,0 0,0 0,-1 -1,-1 -1,-1 -2,-2 -1,0 -1,0 -2,0zm-45 17l0 0 0 0z"
+                                                                id="id_112" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                        <g>
+                                                            <path class="fil0"
+                                                                d="M58 293c-3,0 -6,-1 -9,-3 0,0 -1,0 -1,0l-38 -23c-5,-2 -9,-6 -10,-12 -1,-4 0,-9 3,-13l70 -122c0,0 0,0 0,0 5,-9 16,-12 25,-7 0,0 0,0 1,0l38 23c5,2 9,7 10,12 1,4 0,9 -3,13l-70 123c0,0 0,0 0,0 -3,5 -10,9 -16,9zm10 -13l0 0 0 0zm-13 -2c3,1 6,0 7,-1l70 -123c0,-1 0,-1 1,-1 0,-1 0,-1 0,-2 0,-1 -1,-2 -2,-3 0,0 -1,0 -1,0l-38 -23c-3,-1 -6,0 -7,2l-70 123c0,0 0,0 -1,1 0,0 0,1 0,1 0,1 1,2 2,3 0,0 1,0 1,0l38 23z"
+                                                                id="id_113" style="fill: #f0a44b"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="benefits-section-box__content">
+                                        <h5 class="mb-3">Meet & Greet Service</h5>
+                                        <p>
+                                            Meet you inside the airport and cruise port terminals
+                                            with a name board. Flights will be monitored for any
+                                            delays.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="benefits-section-box">
+                                    <div class="benefits-section-box__icon mb-4">
+                                        <svg width="50" height="50" viewBox="0 0 512 512" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M464 48H448V36C448 28.5739 445.05 21.452 439.799 16.201C434.548 10.95 427.426 8 420 8C412.574 8 405.452 10.95 400.201 16.201C394.95 21.452 392 28.5739 392 36V48H360V36C360 28.5739 357.05 21.452 351.799 16.201C346.548 10.95 339.426 8 332 8C324.574 8 317.452 10.95 312.201 16.201C306.95 21.452 304 28.5739 304 36V48H272V36C272 28.5739 269.05 21.452 263.799 16.201C258.548 10.95 251.426 8 244 8C236.574 8 229.452 10.95 224.201 16.201C218.95 21.452 216 28.5739 216 36V48H184V36C184 28.5739 181.05 21.452 175.799 16.201C170.548 10.95 163.426 8 156 8C148.574 8 141.452 10.95 136.201 16.201C130.95 21.452 128 28.5739 128 36V48H112C103.516 48.0095 95.3824 51.384 89.3833 57.3831C83.3842 63.3822 80.0098 71.516 80.0002 80V197.886C80.0121 276.249 58.2669 353.076 17.1872 419.808C16.4415 421.02 16.0326 422.409 16.0027 423.832C15.9729 425.255 16.3231 426.66 17.0174 427.902C17.7116 429.145 18.7247 430.18 19.9522 430.9C21.1797 431.62 22.577 432 24.0002 432H80.0002V456C80.0002 458.122 80.8431 460.157 82.3434 461.657C83.8437 463.157 85.8785 464 88.0002 464H488C490.122 464 492.157 463.157 493.657 461.657C495.157 460.157 496 458.122 496 456V80C495.991 71.516 492.616 63.3822 486.617 57.3831C480.618 51.384 472.484 48.0095 464 48ZM408 36C408 32.8174 409.265 29.7652 411.515 27.5147C413.765 25.2643 416.818 24 420 24C423.183 24 426.235 25.2643 428.486 27.5147C430.736 29.7652 432 32.8174 432 36V84C432 87.1826 430.736 90.2348 428.486 92.4853C426.235 94.7357 423.183 96 420 96C416.818 96 413.765 94.7357 411.515 92.4853C409.265 90.2348 408 87.1826 408 84V36ZM320 36C320 32.8174 321.265 29.7652 323.515 27.5147C325.765 25.2643 328.818 24 332 24C335.183 24 338.235 25.2643 340.486 27.5147C342.736 29.7652 344 32.8174 344 36V84C344 87.1826 342.736 90.2348 340.486 92.4853C338.235 94.7357 335.183 96 332 96C328.818 96 325.765 94.7357 323.515 92.4853C321.265 90.2348 320 87.1826 320 84V36ZM232 36C232 32.8174 233.265 29.7652 235.515 27.5147C237.765 25.2643 240.818 24 244 24C247.183 24 250.235 25.2643 252.486 27.5147C254.736 29.7652 256 32.8174 256 36V84C256 87.1826 254.736 90.2348 252.486 92.4853C250.235 94.7357 247.183 96 244 96C240.818 96 237.765 94.7357 235.515 92.4853C233.265 90.2348 232 87.1826 232 84V36ZM144 36C144 32.8174 145.265 29.7652 147.515 27.5147C149.765 25.2643 152.818 24 156 24C159.183 24 162.235 25.2643 164.486 27.5147C166.736 29.7652 168 32.8174 168 36V84C168 87.1826 166.736 90.2348 164.486 92.4853C162.235 94.7357 159.183 96 156 96C152.818 96 149.765 94.7357 147.515 92.4853C145.265 90.2348 144 87.1826 144 84V36ZM96.0002 197.886V80C96.0053 75.7581 97.6926 71.6913 100.692 68.6918C103.692 65.6924 107.758 64.005 112 64H128V84C128 91.4261 130.95 98.548 136.201 103.799C141.452 109.05 148.574 112 156 112C163.426 112 170.548 109.05 175.799 103.799C181.05 98.548 184 91.4261 184 84V64H216V84C216 91.4261 218.95 98.548 224.201 103.799C229.452 109.05 236.574 112 244 112C251.426 112 258.548 109.05 263.799 103.799C269.05 98.548 272 91.4261 272 84V64H304V84C304 91.4261 306.95 98.548 312.201 103.799C317.452 109.05 324.574 112 332 112C339.426 112 346.548 109.05 351.799 103.799C357.05 98.548 360 91.4261 360 84V64H392V84C392 91.4261 394.95 98.548 400.201 103.799C405.452 109.05 412.574 112 420 112C427.426 112 434.548 109.05 439.799 103.799C445.05 98.548 448 91.4261 448 84V64H464C468.242 64.005 472.309 65.6924 475.308 68.6918C478.308 71.6913 479.995 75.7581 480 80V178.466C480.036 227.17 470.008 275.355 450.543 320H78.6882C90.1723 280.312 96.0004 239.202 96.0002 197.886V197.886ZM73.7272 336H443.08C437.075 348.073 430.382 359.793 423.035 371.1C422.771 371.436 422.535 371.792 422.327 372.166C412.2 387.636 400.882 402.291 388.474 416H38.0482C52.577 390.589 64.5294 363.789 73.7272 336V336ZM480 448H96.0002V432H392C393.105 432 394.197 431.771 395.209 431.328C396.22 430.885 397.129 430.238 397.878 429.426C410.971 415.236 422.94 400.048 433.674 384H480V448ZM480 368H443.811C450.57 356.678 456.717 345.002 462.224 333.021C463.058 331.989 463.621 330.765 463.861 329.46C470.139 315.409 475.53 300.979 480 286.253V368Z"
+                                                fill="#f0a44b" id="id_101"></path>
+                                            <path
+                                                d="M238.682 288.862C254.061 288.902 268.862 283.005 280 272.401C285.627 277.808 292.506 281.736 300.021 283.835C307.537 285.934 315.455 286.139 323.069 284.43C330.683 282.722 337.755 279.154 343.654 274.045C349.552 268.937 354.093 262.446 356.87 255.154L380.902 192.054C385.36 180.348 384.986 167.351 379.861 155.921C374.736 144.492 365.28 135.566 353.574 131.108C341.868 126.65 328.871 127.025 317.442 132.15C306.012 137.275 297.086 146.73 292.628 158.436L281.811 186.836C281.611 186.627 281.417 186.41 281.211 186.203C274.218 179.21 265.608 174.049 256.144 171.178C246.68 168.307 236.654 167.814 226.955 169.743C217.255 171.673 208.18 175.965 200.535 182.239C192.89 188.513 186.911 196.575 183.126 205.713C179.341 214.85 177.869 224.779 178.838 234.621C179.808 244.464 183.189 253.915 188.684 262.138C194.179 270.361 201.617 277.102 210.339 281.764C219.061 286.426 228.798 288.864 238.688 288.864L238.682 288.862ZM238.682 272.862C229.737 272.883 221 270.166 213.645 265.075L273.832 204.889C274.24 204.479 274.603 204.025 274.914 203.537C279.517 210.155 282.219 217.908 282.727 225.953C283.235 233.998 281.529 242.029 277.795 249.173C274.061 256.318 268.442 262.303 261.546 266.479C254.651 270.655 246.744 272.863 238.682 272.862V272.862ZM341.913 249.462C340.034 254.392 336.937 258.765 332.911 262.175C328.884 265.584 324.06 267.918 318.888 268.959C313.716 270 308.365 269.714 303.333 268.127C298.301 266.541 293.753 263.706 290.113 259.887C295.212 251.433 298.159 241.858 298.698 232.001C299.237 222.143 297.351 212.304 293.204 203.345L351.084 225.387L341.913 249.462ZM307.575 164.13C310.554 156.432 316.458 150.227 323.999 146.869C331.539 143.512 340.102 143.277 347.815 146.214C355.529 149.152 361.766 155.023 365.163 162.545C368.56 170.068 368.842 178.629 365.945 186.358L356.776 210.434L298.406 188.201L307.575 164.13ZM207.475 197.519C214.802 190.213 224.459 185.708 234.765 184.79C245.071 183.872 255.373 186.599 263.875 192.495C263.387 192.806 262.935 193.169 262.524 193.577L202.344 253.757C196.503 245.257 193.818 234.982 194.755 224.711C195.691 214.44 200.19 204.82 207.472 197.516L207.475 197.519Z"
+                                                fill="#f0a44b" id="id_102"></path>
+                                            <path
+                                                d="M336 352C331.253 352 326.613 353.408 322.666 356.045C318.72 358.682 315.643 362.43 313.827 366.816C312.01 371.201 311.535 376.027 312.461 380.682C313.387 385.338 315.673 389.614 319.029 392.971C322.386 396.327 326.662 398.613 331.318 399.539C335.973 400.465 340.799 399.99 345.184 398.173C349.57 396.357 353.318 393.28 355.955 389.334C358.592 385.387 360 380.747 360 376C359.993 369.637 357.462 363.537 352.963 359.037C348.463 354.538 342.363 352.007 336 352V352ZM336 384C334.418 384 332.871 383.531 331.555 382.652C330.24 381.773 329.214 380.523 328.609 379.061C328.003 377.6 327.845 375.991 328.154 374.439C328.462 372.887 329.224 371.462 330.343 370.343C331.462 369.224 332.887 368.462 334.439 368.154C335.991 367.845 337.6 368.003 339.061 368.609C340.523 369.214 341.773 370.24 342.652 371.555C343.531 372.871 344 374.418 344 376C343.998 378.121 343.154 380.154 341.654 381.654C340.154 383.154 338.121 383.998 336 384Z"
+                                                fill="#f0a44b" id="id_103"></path>
+                                            <path
+                                                d="M256 352C251.253 352 246.613 353.408 242.666 356.045C238.72 358.682 235.643 362.43 233.827 366.816C232.01 371.201 231.535 376.027 232.461 380.682C233.387 385.338 235.673 389.614 239.029 392.971C242.386 396.327 246.662 398.613 251.318 399.539C255.973 400.465 260.799 399.99 265.184 398.173C269.57 396.357 273.318 393.28 275.955 389.334C278.592 385.387 280 380.747 280 376C279.993 369.637 277.462 363.537 272.963 359.037C268.463 354.538 262.363 352.007 256 352V352ZM256 384C254.418 384 252.871 383.531 251.555 382.652C250.24 381.773 249.214 380.523 248.609 379.061C248.003 377.6 247.845 375.991 248.154 374.439C248.462 372.887 249.224 371.462 250.343 370.343C251.462 369.224 252.887 368.462 254.439 368.154C255.991 367.845 257.6 368.003 259.061 368.609C260.523 369.214 261.773 370.24 262.652 371.555C263.531 372.871 264 374.418 264 376C263.998 378.121 263.154 380.154 261.654 381.654C260.154 383.154 258.121 383.998 256 384Z"
+                                                fill="#f0a44b" id="id_104"></path>
+                                            <path
+                                                d="M176 352C171.253 352 166.613 353.408 162.666 356.045C158.72 358.682 155.643 362.43 153.827 366.816C152.01 371.201 151.535 376.027 152.461 380.682C153.387 385.338 155.673 389.614 159.029 392.971C162.386 396.327 166.662 398.613 171.318 399.539C175.973 400.465 180.799 399.99 185.184 398.173C189.57 396.357 193.318 393.28 195.955 389.334C198.592 385.387 200 380.747 200 376C199.993 369.637 197.462 363.537 192.963 359.037C188.463 354.538 182.363 352.007 176 352ZM176 384C174.418 384 172.871 383.531 171.555 382.652C170.24 381.773 169.214 380.523 168.609 379.061C168.003 377.6 167.845 375.991 168.154 374.439C168.462 372.887 169.224 371.462 170.343 370.343C171.462 369.224 172.887 368.462 174.439 368.154C175.991 367.845 177.6 368.003 179.061 368.609C180.523 369.214 181.773 370.24 182.652 371.555C183.531 372.871 184 374.418 184 376C183.998 378.121 183.154 380.154 181.654 381.654C180.154 383.154 178.121 383.998 176 384Z"
+                                                fill="#f0a44b" id="id_105"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="benefits-section-box__content">
+                                        <h5 class="mb-3">Appointments</h5>
+                                        <p>
+                                            Don't miss out any significant appointments. Either if
+                                            it is a medical appointment or an interview, we will
+                                            make sure that you are on time.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="benefits-section-box">
+                                    <div class="benefits-section-box__icon mb-4">
+                                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                            width="50" viewBox="0 0 512 512">
+                                            <defs>
+                                                <style>
+                                                    .cls-1 {
+                                                        fill: #ff94ae;
+                                                    }
+
+                                                    .cls-2 {
+                                                        fill: #f4607f;
+                                                    }
+
+                                                    .cls-3 {
+                                                        opacity: 0.1;
+                                                    }
+
+                                                    .cls-4 {
+                                                        fill: #231f20;
+                                                    }
+                                                </style>
+                                            </defs>
+                                            <title>tone-flat</title>
+                                            <path class="cls-1"
+                                                d="M151.23,76.54,95.93,153.6,19.51,98.49C-1.48,82.88-6.28,52.73,8.76,31.1A45.73,45.73,0,0,1,74,20.22l.77.58.51-.77A45.7,45.7,0,0,1,140.47,9.15a48.49,48.49,0,0,1,18.88,31.42A49,49,0,0,1,151.23,76.54Z"
+                                                id="id_101" style="fill: #f0a44b"></path>
+                                            <path class="cls-2"
+                                                d="M396.8,83.2H377.6V348.93a89.58,89.58,0,1,0,38.14,79.87H416V124a77,77,0,0,1,57.6,74.37H512A115.33,115.33,0,0,0,396.8,83.2Z"
+                                                id="id_102" style="fill: #f0a44b"></path>
+                                            <path class="cls-2"
+                                                d="M279.8,227.33a37.88,37.88,0,0,0-2.43-28.93c-9.66-18.75-32.51-26.37-51.14-17l-.64.32-.38-.7a38.6,38.6,0,0,0-22.14-19,37.41,37.41,0,0,0-45.25,52.74l35.71,67,67.52-32.58A36.76,36.76,0,0,0,279.8,227.33Z"
+                                                id="id_103" style="fill: #f0a44b"></path>
+                                            <g class="cls-3">
+                                                <path class="cls-4"
+                                                    d="M151.23,76.54,95.93,153.6,74.75,20.8l.51-.77A45.7,45.7,0,0,1,140.47,9.15a48.49,48.49,0,0,1,18.88,31.42A49,49,0,0,1,151.23,76.54Z"
+                                                    id="id_104" style="fill: #f0a44b"></path>
+                                            </g>
+                                            <g class="cls-3">
+                                                <path class="cls-4"
+                                                    d="M279.8,227.33a36.77,36.77,0,0,1-18.75,21.82l-67.52,32.58L225.21,181l.38.7.64-.32c18.62-9.34,41.47-1.73,51.14,17A37.89,37.89,0,0,1,279.8,227.33Z"
+                                                    id="id_105" style="fill: #f0a44b"></path>
+                                            </g>
+                                            <g class="cls-3">
+                                                <path class="cls-4"
+                                                    d="M512,198.4H473.6A77,77,0,0,0,416,124V428.8h-.26A89.66,89.66,0,0,1,326.4,512V332.8a89,89,0,0,1,51.2,16.13V83.2h19.2A115.33,115.33,0,0,1,512,198.4Z"
+                                                    id="id_106" style="fill: #f0a44b"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="benefits-section-box__content">
+                                        <h5 class="mb-3">Weddings</h5>
+                                        <p>
+                                            Create memories with your soul-mate with us throughout
+                                            the entire ride!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="benefits-section-box">
+                                    <div class="benefits-section-box__icon mb-4">
+                                        <svg version="1.1" id="Icons" width="50" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 32 32" style="enable-background: new 0 0 32 32"
+                                            xml:space="preserve">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: none;
+                                                    stroke: #000000;
+                                                    stroke-width: 2;
+                                                    stroke-linecap: round;
+                                                    stroke-linejoin: round;
+                                                    stroke-miterlimit: 10;
+                                                }
+                                            </style>
+                                            <path class="st0" d="M20,9c0,2.2-1.8,4-4,4s-4-1.8-4-4s4-6,4-6S20,6.8,20,9z"
+                                                id="id_101" style="stroke: #f0a44b"></path>
+                                            <line class="st0" x1="15" y1="22" x2="15" y2="16" id="id_102"
+                                                style="stroke: #f0a44b"></line>
+                                            <line class="st0" x1="7" y1="29" x2="25" y2="29" id="id_103"
+                                                style="stroke: #f0a44b"></line>
+                                            <polyline class="st0" points="12,29 12,16 20,16 20,29 " id="id_104"
+                                                style="stroke: #f0a44b"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="benefits-section-box__content">
+                                        <h5 class="mb-3">Condolences</h5>
+                                        <p>
+                                            Recall and embrace the memories of your beloved on your
+                                            way to their funeral. The soothing ride is assured from
+                                            our side.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="client-satisfaction-section">
+            <div class="container mx-auto">
+                <h2 class="text-center mb-3 text_36">Client Satisfaction</h2>
+                <p class="text-center text_16">
+                    Over 1000+ Clients are head over heels in love with our services.
+                    Choose us and fall for our services too! Trust us, <br />
+                    it will be one of the best decisions of your life!
+                </p>
+                <div class="row home-services-box__wrapper">
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+                        <div class="client-satisfaction-box">
+                            <div class="client-satisfaction-box__img">
+                                <img src="./assets/img/home2-img3.webp" alt="" />
+                            </div>
+                            <div class="client-satisfaction-box__content">
+                                <h5>Refreshing rides</h5>
+                                <p>
+                                    Either it’s Vacation or Workation, we are the most perfect
+                                    fit for your choice.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+                        <div class="client-satisfaction-box">
+                            <div class="client-satisfaction-box__img">
+                                <img src="./assets/img/home2-img4.webp" alt="" />
+                            </div>
+                            <div class="client-satisfaction-box__content">
+                                <h5>Navigation</h5>
+                                <p>
+                                    Our vehicles are equipped with the best navigation system to
+                                    find the best route to your destination.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+                        <div class="client-satisfaction-box">
+                            <div class="client-satisfaction-box__img">
+                                <img src="./assets/img/home2-img6.webp" alt="" />
+                            </div>
+                            <div class="client-satisfaction-box__content">
+                                <h5>Help amidst the haste</h5>
+                                <p>
+                                    A damsel in distress or trapped somewhere unfamiliar, our
+                                    super heroes can save you with just one click.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section d-flex justify-content-center align-items-center">
+            <div class="contact-box d-flex justify-content-center align-items-center flex-column">
+                <h2 class="text-white">Hold up! Here is the most important part</h2>
+                <p class="text_16 mb-4 text-white">
+                    Thank you for visiting our website! We would be beyond delighted to
+                    see your name on our booking list anytime soon. But it’s worth the
+                    wait.
+                </p>
+                <a href="">
+                    Contact
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="20"
+                        viewBox="0 0 128 128">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #2d3e50;
+                                }
+                            </style>
+                        </defs>
+                        <title>v</title>
+                        <path class="cls-1"
+                            d="M109.632,52.65055c-6.37167-1.307-8.33641-1.21126-14.79512-1.20473q-1.75169.00321-3.50562.00434c-2.80482.00412-6.1248.00889-10.06154.013L74.08882,39.89628,71.3887,35.547,51.658,3.76553l-.02891-.04325A3.74862,3.74862,0,0,0,44.87756,6.463l2.31219,45.00239q-6.0099-.00458-12.86218-.01306a45.54119,45.54119,0,0,0-7.57223.73024L19.15619,38.25085a2.67975,2.67975,0,0,0-5.02253,1.50957c.0061.07077-.005,12.22182-.00873,16.09465-2.09475.92985-4.104,1.953-5.8147,2.88227-.93729.50671-1.78321.98729-2.50741,1.407l-.00434.00434a5.27352,5.27352,0,0,0,0,7.70257l.00434.00439c.7242.41967,1.57012.90025,2.50741,1.407,1.71068.92932,3.72,1.95247,5.8147,2.88233.00369,3.87278.01483,16.02388.00873,16.09465a2.67975,2.67975,0,0,0,5.02253,1.50957L26.75534,75.8174a45.54119,45.54119,0,0,0,7.57223.73024q6.86246-.00859,12.86218-.01306L44.87756,121.537a3.75025,3.75025,0,0,0,6.75157,2.74069l.02891-.0432L71.3887,92.453l2.70011-4.34929,7.18093-11.56678c3.93674.004,7.25672.00878,10.06154.013q1.75506,0,3.50562.00434c6.45871.00653,8.42345.10219,14.79512-1.20473C115.393,74.16774,123.81852,71.12863,123.87258,64,123.81852,56.87137,115.393,53.83226,109.632,52.65055Z"
+                            id="id_101" style="fill: rgb(255, 255, 255)"></path>
+                    </svg>
+                </a>
             </div>
         </section>
 
@@ -347,9 +1252,100 @@
             </div>
         </footer>
     </main>
-    <script src="https://airportconnect.co.uk/assets/js/jquery.min.js"></script>
-    <script src="https://airportconnect.co.uk/assets/js/bootstrap.bundle.min-5.1.3.js"></script>
-    <script src="https://airportconnect.co.uk/assets/js/combined.js"></script>
+
+    <!-- js files -->
+
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/combined.js"></script>
+    <link rel="stylesheet" href="https://www.airportsimplyconnect.co.uk/assets/css/autocomplete.css" />
+    <link rel="stylesheet" href="https://www.airportsimplyconnect.co.uk/assets/css/glyphicon.css" />
+    <link rel="stylesheet" href="https://www.airportsimplyconnect.co.uk/assets/css/bootstrap-datetimepicker.css" />
+    <link rel="stylesheet" href="https://www.airportsimplyconnect.co.uk/assets/css/pnotify.css" />
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/moment.min.js"></script>
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/moment-timezone-with-data.min.js"></script>
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/parsley.min.js"></script>
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/pnotify.js"></script>
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/locations.js?ver=1.4653"></script>
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/autocomplete.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            let navbar = document.querySelector(".navbar");
+            if (window.scrollY > 70) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        });
+
+        var key = "pHxRSP6wlq";
+        var cabookiePath = "https://www.airportsimplyconnect.co.uk";
+        var cardPaymentUrl = cabookiePath + "/payment/process.php?k=" + key;
+        var successUrl = cabookiePath + "/cabookie-confirmation.php?k=" + key;
+        var SERVICE_COUNTRY = "GB";
+        var timezone = "Europe/Simferopol";
+        var advanceBookingFilterMinValue = "3";
+        var advanceBookingFilterMinType = "hours";
+        var advanceBookingFilterMaxValue = "3";
+        var advanceBookingFilterMaxType = "years";
+        var pickUpDate = "";
+        var journeyHoursRtn = "0";
+        var maxAdditionalDropoffs = 2;
+        var passengers = "1";
+        var childSeats = "0";
+        var smallLuggage = "0";
+        var largeLuggage = "0";
+        var vehicleIDSelected = "0";
+        var maxDropOffMsg =
+            "You have reached maximum number of additional drop off's";
+    </script>
+    <script src="https://www.airportsimplyconnect.co.uk/assets/js/cabookie.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_EpY0Hzauw5YiH9awEH61DKELZuzWUzU&libraries=places&callback=init"
+        async defer></script>
+    <div class="hide" id="refresh"></div>
+    <script>
+        setInterval(function () {
+            $("#refresh").load(
+                "https://www.airportsimplyconnect.co.uk/refresh.php"
+            );
+        }, 300000);
+    </script>
+    <script defer src="https://www.airportsimplyconnect.co.uk/vendor/cookie-consent/src/cookieconsent.js"></script>
+    <script defer src="https://www.airportsimplyconnect.co.uk/vendor/cookie-consent/init.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#cc-privacy-policy").on("click", function (e) {
+                window
+                    .open(
+                        "https://www.airportsimplyconnect.co.uk/privacy-policy/",
+                        "_blank"
+                    )
+                    .focus();
+            });
+            $("#cc-website-url").on("click", function (e) {
+                window
+                    .open("https://www.airportsimplyconnect.co.uk/contact/", "_blank")
+                    .focus();
+            });
+        });
+    </script>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: "en",
+                    layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+                },
+                "google_translate_element"
+            );
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

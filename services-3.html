@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel='shortcut icon' href='https://airportconnect.co.uk/assets/logo/favicon.jpg'>
+    <link rel="stylesheet" href="https://airportconnect.co.uk/assets/css/bootstrap.min-5.1.3.css">
+    <link rel="stylesheet" href="https://airportconnect.co.uk/assets/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        :root {
+            --ns-font-family: sans-serif;
+            --ns-bg-top-footer: 0, 64, 128;
+            --ns-text-top-footer: 255, 255, 255;
+            --ns-bg-menu: 255, 255, 255;
+            --ns-text-menu: 0, 0, 0;
+            --ns-bg-primary: 0, 64, 128;
+            --ns-bg-secondary: 255, 200, 0;
+            --ns-text-primary: 255, 255, 255;
+            --ns-text-secondary: 0, 0, 0;
+            --bs-primary-rgb: 0, 64, 128;
+            --bs-secondary-rgb: 255, 200, 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="navbar-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-12">
+                        <div class="navbar-social sm-text-center">
+                            <div class="">
+                                <div id="google_translate_element" style="display:inline-block;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-12 d-flex justify-content-end align-items-center">
+                        <div class="navbar-callus text-end sm-text-center">
+                            <div class="">
+                                <span><a href="tel:+442078709197" class="text-decoration-none"><i
+                                            class="fa-solid fa-phone"></i> +442078709197</a></span>
+                                <span><a href="mailto:info@airportsimplyconnect.co.uk" class="text-decoration-none"><i
+                                            class="fa-solid fa-envelope"></i> info@airportsimplyconnect.co.uk</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="main-header">
+            <nav class="navbar navbar-expand-xl navbar-dark">
+                <div class="container">
+                    <a href="#" class="navbar-brand">
+                        <img src="./assets/images/logo.png" alt="" />
+                    </a>
+                    <button class="navbar-toggler bg-dark text-white px-3 py-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                    <div class="offcanvas offcanvas-end" id="navbarOffcanvas" tabindex="-1"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <ul class="navbar-nav mb-2 mb-lg-0 gap-4">
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="./index.html" target="_self" title="">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./about.html" target="_self" title="">About</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link" href="./services.html" target="_self" title="">Services</a>
+                                    </li> -->
+                                    <!-- if customerLogin-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item " href="./services-1.html">Stansted
+                                                    airport </a>
+                                            </li>
+                                            <li><a class="dropdown-item " href="./services-2.html">Heathrow
+                                                    Airport </a>
+                                            </li>
+                                            <li><a class="dropdown-item active" href="./services-3.html">Gatwick
+                                                    airport</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="./services-4.html">Luton airport</a></li>
+                                            <li><a class="dropdown-item" href="./services-5.html">Cambridge airport</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="./services-6.html">Oxford airport</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="http://airportsimplyconnect.co.uk/reviews/"
+                                            target="_self" title="">Reviews</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="http://airportsimplyconnect.co.uk/contact/"
+                                            target="_self" title="">Contact Us</a>
+                                    </li>
+                                    <!-- if customerLogin-->
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">My Account</a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Rides
+                                                    history</a></li>
+                                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href='#'>
+                                                    Log out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- else -->
+                                    <li class="nav-item">
+                                        <a class="nav-link"
+                                            href="https://www.airportsimplyconnect.co.uk/login.php">Login</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="landingPage mb-0">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-center">
+                    <h1 class="text-white text-center fw-bold mb-3">
+                        Airport Simply Connect London <br />
+                        Airport Transfers
+                    </h1>
+                    <p class="text_24 mb-4 text-white">
+                        Your Local Airport Transfer Service Network
+                    </p>
+                    <div class="banner-v2  banner-v3">
+                        <form name="frmCabookie" id="frmCabookie"
+                            action="https://www.airportsimplyconnect.co.uk/vehicle-selection/" method="POST"
+                            target="_parent" data-parsley-validate="" novalidate="">
+                            <input type="hidden" name="rdJourneyCategory" value="Regular" />
+                            <div class="row gx-2">
+                                <div class="min-form-pickup mb-3">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px"
+                                                fill="#004080" class="w-6 h-6">
+                                                <path fill-rule="evenodd"
+                                                    d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                        <input type="text" id="txtPickUpLocation" name="txtPickUp"
+                                            placeholder="Pick Up - Location/Address"
+                                            class="form-control autocomplete-Location rounded-end ui-autocomplete-input"
+                                            autocomplete="off" required="required"
+                                            data-parsley-errors-container="#pickErrCon"
+                                            data-parsley-error-message="Please select valid location/address" />
+                                        <input type="text" id="txtPickUp" name="txtPickUp"
+                                            placeholder="Pick Up - Location/Address"
+                                            class="form-control autocomplete-Google pac-target-input" autocomplete="off"
+                                            style="display: none" disabled="disabled"
+                                            data-parsley-errors-container="#pickErrCon"
+                                            data-parsley-error-message="Please select valid address" />
+                                    </div>
+                                    <input type="hidden" id="txtPickUpLat" name="txtPickUpLat" />
+                                    <input type="hidden" id="txtPickUpLng" name="txtPickUpLng" />
+                                    <div id="pickErrCon"></div>
+                                </div>
+                                <div class="min-form-dropoff position-relative mb-3">
+                                    <div id="dropOff1Row">
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px"
+                                                    fill="#004080" class="w-6 h-6">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" id="txtDropOff1Location" name="txtDropOff[]"
+                                                placeholder="Drop Off"
+                                                class="form-control autocomplete-Location ui-autocomplete-input"
+                                                autocomplete="off" required="required"
+                                                data-parsley-errors-container="#dropErrCon"
+                                                data-parsley-error-message="Please select valid location/address" />
+                                            <input type="text" id="txtDropOff1" name="txtDropOff[]"
+                                                placeholder="Drop Off"
+                                                class="form-control autocomplete-Google pac-target-input"
+                                                autocomplete="off" style="display: none" disabled="disabled"
+                                                data-parsley-errors-container="#dropErrCon"
+                                                data-parsley-error-message="Please select valid location/address" />
+                                            <button type="button" class="btn btn-primary" onclick="addDropOff();">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <input type="hidden" id="txtDropOff1Lat" name="txtDropOff1Lat" />
+                                        <input type="hidden" id="txtDropOff1Lng" name="txtDropOff1Lng" />
+                                    </div>
+                                    <div id="dropErrCon"></div>
+                                    <div id="addedRows" class="w-100">
+                                        <div id="dropoff2" style="display: none">
+                                            <div class="input-group p-2">
+                                                <span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="20px" fill="#004080" class="w-6 h-6">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" id="txtDropOff2Location" name="txtDropOff[]"
+                                                    placeholder="Via"
+                                                    class="form-control autocomplete-Location ui-autocomplete-input"
+                                                    autocomplete="off" data-parsley-errors-container="#dropOffErrCon2"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="text" id="txtDropOff2" name="txtDropOff[]"
+                                                    placeholder="Via"
+                                                    class="form-control autocomplete-Google pac-target-input"
+                                                    autocomplete="off" style="display: none" disabled="disabled"
+                                                    data-parsley-errors-container="#dropOffErrCon2"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="hidden" id="txtDropOff2Lat" name="txtDropOff2Lat"
+                                                    value="" />
+                                                <input type="hidden" id="txtDropOff2Lng" name="txtDropOff2Lng"
+                                                    value="" />
+                                                <button type="button" class="btn btn-danger"
+                                                    onclick="removeDropOff(2);">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <div id="dropOffErrCon2"></div>
+                                        </div>
+                                        <div id="dropoff3" style="display: none">
+                                            <div class="input-group p-2 mt-2">
+                                                <span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="20px" fill="#004080" class="w-6 h-6">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" id="txtDropOff3Location" name="txtDropOff[]"
+                                                    placeholder="Drop Off"
+                                                    class="form-control autocomplete-Location ui-autocomplete-input"
+                                                    autocomplete="off" data-parsley-errors-container="#dropOffErrCon3"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="text" id="txtDropOff3" name="txtDropOff[]"
+                                                    placeholder="Drop Off"
+                                                    class="form-control autocomplete-Google pac-target-input"
+                                                    autocomplete="off" style="display: none" disabled="disabled"
+                                                    data-parsley-errors-container="#dropOffErrCon3"
+                                                    data-parsley-error-message="Please select valid location/address" />
+                                                <input type="hidden" id="txtDropOff3Lat" name="txtDropOff3Lat"
+                                                    value="" />
+                                                <input type="hidden" id="txtDropOff3Lng" name="txtDropOff3Lng"
+                                                    value="" />
+                                                <button type="button" class="btn btn-danger"
+                                                    onclick="removeDropOff(3);">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <div id="dropOffErrCon3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="min-form-datetime mb-3">
+                                    <div class="row gx-1">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                        width="20px" fill="#004080" class="w-6 h-6">
+                                                        <path
+                                                            d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </span>
+                                                <input type="text" name="txtDate" id="datepicker" class="form-control"
+                                                    placeholder="Pickup date" required=""
+                                                    data-parsley-errors-container="#txtDateCon"
+                                                    data-parsley-error-message="Please select valid date"
+                                                    readonly="readonly" />
+                                            </div>
+                                            <div id="txtDateCon"></div>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <select name="selDateHr" id="selDateHr" class="form-select form-select-lg"
+                                                required="" data-parsley-error-message="Required">
+                                                <option value="">HH</option>
+                                                <option value="00">00</option>
+                                                <option value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 col-6">
+                                            <select name="selDateMn" id="selDateMn" class="form-select form-select-lg"
+                                                required="" data-parsley-error-message="Required">
+                                                <option value="">MM</option>
+                                                <option value="00">00</option>
+                                                <option value="05">05</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="25">25</option>
+                                                <option value="30">30</option>
+                                                <option value="35">35</option>
+                                                <option value="40">40</option>
+                                                <option value="45">45</option>
+                                                <option value="50">50</option>
+                                                <option value="55">55</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="min-form-submit col-12 c">
+                                    <input type="button" class="btn btn-primary w-100 h-100" id="btnCheckPrice"
+                                        value="GET QUOTE" />
+                                    <input type="hidden" name="cabookie" value="M" /><input type="hidden" name="key"
+                                        id="key" value="bGP8RpfAaZ" />
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section-new">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Gatwick Airport Transfers:</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row service-section-item align-items-center">
+                            <div class="col-md-8 ">
+                                <h1>
+                                    Reliable Gatwick Airport Transfers: Your Easy Solution
+
+                                </h1>
+                                <p>
+                                    Are you tired of the hassle and stress of navigating public transportation or
+                                    unreliable taxi services to get to and from Gatwick Airport? Look no further!
+                                    Gatwick Airport Transfers are the perfect solution for your travel needs.
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img src="./assets/images/AIRPORT-TRANSFERS.jpg" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row service-section-item align-items-center">
+                            <div class="col-md-8 ">
+                                <h1>
+
+                                    The Convenience of Pre-Booked Transfers
+                                </h1>
+                                <p>
+                                    By pre-booking a transfer service, you can rest assured that a professional driver
+                                    will be waiting for you upon your arrival at Gatwick Airport. No more waiting in
+                                    long queues or worrying about the availability of transportation. Your driver will
+                                    be ready to whisk you away to your destination in comfort and style.
+
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img src="./assets/images/2-2.jpg" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=" col-md-12">
+                        <div class="row service-section-item align-items-center">
+                            <div class="col-md-8 ">
+                                <h1>
+
+                                    Comfort and Safety First
+                                </h1>
+                                <p>
+                                    Gatwick Airport Transfers prioritize your comfort and safety, providing
+                                    well-maintained vehicles and experienced drivers to ensure a smooth and pleasant
+                                    journey. Whether you're traveling alone or with a group, there is a range of vehicle
+                                    options to accommodate your needs.
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img src="./assets/images/ezgif.com-gif-maker-2-1-scaled.webp" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row service-section-item align-items-center">
+                            <div class="col-md-8 ">
+                                <h1>
+                                    Competitive Rates and Transparent Pricing
+                                </h1>
+                                <p>
+                                    Say goodbye to unexpected fees and haggling over fares. With Gatwick Airport
+                                    Transfers, you can enjoy competitive rates and transparent pricing. Know exactly
+                                    what you're paying upfront, with no hidden charges or surprises.
+
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img src="./assets/images/988-9888208_affordable-rates-on-insurance-best-price.png"
+                                        alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row service-section-item align-items-center">
+                            <div class="col-md-8 ">
+                                <h1>
+                                    24/7 Availability and Exceptional Customer Service
+                                </h1>
+                                <p>
+                                    Need a transfer at the crack of dawn or in the middle of the night? Gatwick Airport
+                                    Transfers have got you covered with 24/7 availability. Experience exceptional
+                                    customer service from the moment you book until you reach your final destination.
+
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img src="./assets/images/png-transparent-24-7-service-customer-service-brand-information-overload-blue-text-service-removebg-preview.png"
+                                        alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row service-section-item align-items-center">
+                            <div class="col-md-8 ">
+                                <h1>
+                                    Conclusion
+                                </h1>
+                                <p>
+                                    In conclusion, Gatwick Airport Transfers offer a stress-free, convenient, and
+                                    reliable transportation solution for your travel needs. Say goodbye to
+                                    transportation woes and hello to a seamless journey to and from Gatwick Airport.
+                                    Book your transfer today and experience the difference!
+
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure>
+                                    <img src="./assets/images/7067950.png" alt="">
+                                </figure>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="container mx-auto">
+                <div class="row footer-box-wrapper flex-column justify-content-center align-items-center gap-4">
+
+                    <div class="col-lg-9 col-md-4">
+                        <div class="footer-box pl-4">
+
+
+                            <div class="footer-box__link d-flex justify-content-center gap-4">
+                                <a href="http://airportsimplyconnect.co.uk/privacy-policy/" target="_self" title="">
+                                    Privacy Policy
+                                </a>
+                                <a href="http://airportsimplyconnect.co.uk/terms/" target="_self" title="">Terms</a>
+                                <a href="https://www.airportsimplyconnect.co.uk/about/" target="_self" title="">
+                                    About
+                                </a>
+                                <a href="https://www.airportsimplyconnect.co.uk/contact/" target="_self" title="">
+                                    Contact
+                                </a>
+                                <a href="https://www.airportsimplyconnect.co.uk/privacy-policy/" target="_self"
+                                    title="">
+                                    Privacy Policy
+                                </a>
+                                <a href="https://www.airportsimplyconnect.co.uk/reviews/" target="_self" title="">
+                                    Reviews
+                                </a>
+                                <a href="https://www.airportsimplyconnect.co.uk/services/" target="_self" title="">
+                                    Services
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-4">
+                        <div class="footer-box ">
+
+                            <ul class="footer-box__contact d-flex gap-3 justify-content-center">
+                                <li>
+                                    phone:
+                                    <span>+442078709197</span>
+                                </li>
+                                <li>
+                                    Email:
+                                    <span>info@airportsimplyconnect.co.uk</span>
+                                </li>
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        width="20" class="w-6 h-6">
+                                        <path fill-rule="evenodd"
+                                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Woodville Road. London. N16 8NA.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text_16 text-white text-center copy_right mt-4">
+                    © 2024&nbsp;London Airport Transfers. All Rights Reserved.
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://airportconnect.co.uk/assets/js/jquery.min.js"></script>
+    <script src="https://airportconnect.co.uk/assets/js/bootstrap.bundle.min-5.1.3.js"></script>
+    <script src="https://airportconnect.co.uk/assets/js/combined.js"></script>
+</body>
+
+</html>
