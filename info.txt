@@ -1,0 +1,13 @@
+need to make 6 service pages. in this webiste: https://www.airportconnect.co.uk/
+content in txt file
+
+https://www.skyairporttransfer.co.uk/airport-transfer.html
+https://www.skyridetransfers.com/kings-cross-taxi.php
+
+see this services individual page too for design idea.
+
+total 6 pages in same design. first we do one page and show then rest 5 pages like that. use nice icons and images related to the content. 
+
+follow the screenshot also tkae idea from the links for design.
+
+use current website bootstrap version and other assets, jquery etc so it doesnt conflict.

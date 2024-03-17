@@ -1,0 +1,12 @@
+var locationsList = [{"value":"London Biggin Hill Airport (BQH)", "lat":"51.3307991", "lng":"0.032499999"},
+{"value":"London City Airport (LCY)", "lat":"51.505299", "lng":"0.055278"},
+{"value":"London Gatwick Airport (LGW), North Terminal", "lat":"51.16027", "lng":"-0.175015"},
+{"value":"London Gatwick Airport (LGW), South Terminal", "lat":"51.156669", "lng":"-0.159695"},
+{"value":"London Heathrow Airport (LHR), Terminal 1", "lat":"51.472324", "lng":"-0.452892"},
+{"value":"London Heathrow Airport (LHR), Terminal 2", "lat":"51.46978", "lng":"-0.45333"},
+{"value":"London Heathrow Airport (LHR), Terminal 3", "lat":"51.471497", "lng":"-0.456631"},
+{"value":"London Heathrow Airport (LHR), Terminal 4", "lat":"51.459183", "lng":"-0.4462"},
+{"value":"London Heathrow Airport (LHR), Terminal 5", "lat":"51.471555", "lng":"-0.489575"},
+{"value":"London Luton Airport (LTN)", "lat":"51.87469864", "lng":"-0.368333012"},
+{"value":"London Stansted Airport (STN)", "lat":"51.88499832", "lng":"0.234999999"},
+{"value":"Southend Airport (SEN)", "lat":"51.57139969", "lng":"0.695555985"}];
